@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">石大交易</string>
+    <string name="text_login">登录</string>
+    <string name="text_keep_password">记住密码</string>
+    <string name="text_forget_password">忘记密码</string>
+    <string name="app_three_login">第三方登录</string>
+    <string name="text_registered">注册</string>
+    <string name="text_user_name">用户名</string>
+    <string name="text_age">年龄</string>
+    <string name="text_desc">个人签名</string>
+    <string name="text_boy">男</string>
+    <string name="text_girl_f">女</string>
+    <string name="text_password">密码</string>
+    <string name="text_password_again">确认密码</string>
+    <string name="text_email">邮箱</string>
+    <string name="text_register_remind">请认真填写邮箱，若密码忘记，可通过邮箱查找</string>
+    <string name="text_nothing">这个人很懒，什么都没有</string>
+    <string name="text_registered_successful">注册成功</string>
+    <string name="text_registered_failure">注册失败</string>
+    <string name="text_two_input_not_consistent">两次输入的密码不一致</string>
+    <string name="text_tost_empty">输入框不能为空</string>
+    <string name="text_now_login">正在登录...</string>
+    <string name="text_editor_success">修改成功</string>
+    <string name="text_editor_failure">修改失败</string>
+    <string name="text_editor_password">修改密码</string>
+    <string name="text_now_password">旧密码</string>
+    <string name="text_new_password">新密码</string>
+    <string name="text_email_send_ok">邮件发送成功</string>
+    <string name="text_email_send_no">邮件发送失败</string>
+    <string name="reset_successfully">密码修改成功</string>
+    <string name="reset_failed">密码修改失败</string>
+    <string name="text_user_info">个人中心</string>
+    <string name="text_message">我的消息</string>
+    <string name="text_buy">闲置求购</string>
+    <string name="text_sell">闲置求收</string>
+</resources>
