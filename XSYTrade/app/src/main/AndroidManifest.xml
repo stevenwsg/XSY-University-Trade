@@ -36,6 +36,16 @@
             android:label="@string/text_registered"></activity>
         <activity android:name=".ui.ForgetPasswordActivity"
             android:label="@string/text_forget_password"></activity>
+        <activity android:name=".ui.AboutActivity"
+            android:label="@string/text_about"></activity>
+        <activity android:name=".ui.BackActivity"
+            android:label="@string/text_back"></activity>
+        <activity android:name=".ui.DonateActivity"
+            android:label="@string/text_donate"></activity>
+        <activity android:name=".ui.ShareActivity"
+            android:label="@string/text_share"></activity>
+        <activity android:name=".ui.UpdateActivity"
+            android:label="@string/text_update"></activity>
 
 
 

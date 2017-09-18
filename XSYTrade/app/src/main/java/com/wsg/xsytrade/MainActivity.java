@@ -12,6 +12,8 @@ import com.wsg.xsytrade.fragment.BuyFragment;
 import com.wsg.xsytrade.fragment.MessageFragment;
 import com.wsg.xsytrade.fragment.SellFragment;
 import com.wsg.xsytrade.fragment.UserFragment;
+import com.wsg.xsytrade.util.ShareUtils;
+import com.wsg.xsytrade.util.StaticClass;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
+        ShareUtils.putBoolean(this, StaticClass.SHARE_IS_LOGIN,false);
         mTitle = new ArrayList<>();
         mTitle.add(getString(R.string.text_sell));
         mTitle.add(getString(R.string.text_buy));

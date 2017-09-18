@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 
+import com.wsg.xsytrade.MainActivity;
 import com.wsg.xsytrade.R;
 import com.wsg.xsytrade.util.ShareUtils;
 import com.wsg.xsytrade.util.StaticClass;
@@ -33,7 +34,7 @@ public class SplashActivity extends Activity {
                         startActivity(new Intent(SplashActivity.this,LoginActivity.class));
                     }
                     else{
-                        startActivity(new Intent(SplashActivity.this,LoginActivity.class));
+                        startActivity(new Intent(SplashActivity.this,MainActivity.class));
                     }
             }
             finish();
@@ -61,8 +62,6 @@ public class SplashActivity extends Activity {
     private boolean isFirst() {
         boolean isFirst = ShareUtils.getBoolean(this,StaticClass.SHARE_IS_LOGIN,true);
         if(isFirst){
-            ShareUtils.putBoolean(this, StaticClass.SHARE_IS_LOGIN,false);
-            //是第一次运行
             return true;
         }else {
             return false;

@@ -32,5 +32,22 @@
     <string name="text_user_info">个人中心</string>
     <string name="text_message">我的消息</string>
     <string name="text_buy">闲置求购</string>
-    <string name="text_sell">闲置求收</string>
+    <string name="text_sell">闲置求售</string>
+    <string name="text_love">没有什么能够阻挡，你对自由的向往</string>
+    <string name="text_app_name">应用名称：</string>
+    <string name="text_version">版本：</string>
+    <string name="text_me">作者：蓝莲花</string>
+    <string name="text_unknown">未知</string>
+    <string name="text_call">QQ:1516961816</string>
+    <string name="text_github">Github：https://github.com/stevenwsg</string>
+    <string name="text_csdn">CSDN:http;//blog.csdn.net/qq_29375837</string>
+    <string name="text_about">关于</string>
+    <string name="text_back_ok">点击提交</string>
+    <string name="text_back_t">请提出您宝贵的意见,非常感谢</string>
+    <string name="text_back">意见反馈</string>
+    <string name="text_donate_t">如果你觉得此软件对你有用，就感谢一下开发者吧，请截屏使用微信扫描二维码捐赠，谢谢</string>
+    <string name="text_donate">捐赠</string>
+    <string name="text_author">作者：蓝莲花</string>
+    <string name="text_share">分享</string>
+    <string name="text_update">检查更新</string>
 </resources>
