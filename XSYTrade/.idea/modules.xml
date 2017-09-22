@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/XSYTrade.iml" filepath="$PROJECT_DIR$/XSYTrade.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/easeui/easeui.iml" filepath="$PROJECT_DIR$/easeui/easeui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/simpledemo/simpledemo.iml" filepath="$PROJECT_DIR$/simpledemo/simpledemo.iml" />
     </modules>
   </component>
 </project>

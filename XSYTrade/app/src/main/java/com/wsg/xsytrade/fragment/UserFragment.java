@@ -22,6 +22,8 @@ import com.wsg.xsytrade.entity.MyUser;
 import com.wsg.xsytrade.ui.AboutActivity;
 import com.wsg.xsytrade.ui.BackActivity;
 import com.wsg.xsytrade.ui.DonateActivity;
+import com.wsg.xsytrade.ui.MyBuyActivity;
+import com.wsg.xsytrade.ui.MySellActivity;
 import com.wsg.xsytrade.ui.ShareActivity;
 import com.wsg.xsytrade.ui.UpdateActivity;
 import com.wsg.xsytrade.util.L;
@@ -154,8 +156,10 @@ public class UserFragment extends Fragment implements View.OnClickListener {
                 updateUser();
                 break;
             case R.id.tv_sell:
+                startActivity(new Intent(getActivity(), MySellActivity.class));
                 break;
             case R.id.tv_buy:
+                startActivity(new Intent(getActivity(), MyBuyActivity.class));
                 break;
             case R.id.tv_donate:
                 startActivity(new Intent(getActivity(), DonateActivity.class));

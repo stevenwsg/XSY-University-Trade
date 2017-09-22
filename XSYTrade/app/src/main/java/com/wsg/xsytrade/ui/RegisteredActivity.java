@@ -110,6 +110,10 @@ public class RegisteredActivity extends BaseActivity {
                     public void done(MyUser myUser, BmobException e) {
                         if(e==null){
                             Toast.makeText(RegisteredActivity.this, R.string.text_registered_successful, Toast.LENGTH_SHORT).show();
+
+
+
+
                             finish();
                         }else{
                             Toast.makeText(RegisteredActivity.this, getString(R.string.text_registered_failure) + e.toString(), Toast.LENGTH_SHORT).show();

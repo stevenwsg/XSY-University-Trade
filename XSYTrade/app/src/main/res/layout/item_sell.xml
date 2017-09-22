@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+
+        android:id="@+id/l"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/sell_item_logo"
+     android:layout_width="40sp"
+     android:layout_height="40sp"
+     android:src="@mipmap/login_logo"/>
+
+
+        <TextView
+            android:id="@+id/sell_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="蒲公英"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/sell_item_title"
+        android:text="出售二手自行车"
+        android:textSize="15sp"
+        android:layout_below="@+id/l"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_below="@+id/sell_item_title"
+        android:id="@+id/sell_item_content"
+        android:text="刚用了一个月，准备出售"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+    <ImageView
+        android:focusable="false"
+        android:background="@mipmap/ic_message"
+        android:layout_below="@+id/sell_item_content"
+        android:id="@+id/sell_item_message"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"/>
+
+
+</RelativeLayout>
+

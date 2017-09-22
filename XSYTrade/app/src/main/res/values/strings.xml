@@ -31,8 +31,8 @@
     <string name="reset_failed">密码修改失败</string>
     <string name="text_user_info">个人中心</string>
     <string name="text_message">我的消息</string>
-    <string name="text_buy">闲置求购</string>
-    <string name="text_sell">闲置求售</string>
+    <string name="text_buy">闲置求售</string>
+    <string name="text_sell">闲置求购</string>
     <string name="text_love">没有什么能够阻挡，你对自由的向往</string>
     <string name="text_app_name">应用名称：</string>
     <string name="text_version">版本：</string>
@@ -50,4 +50,8 @@
     <string name="text_author">作者：蓝莲花</string>
     <string name="text_share">分享</string>
     <string name="text_update">检查更新</string>
+    <string name="text_add_sell">添加出售</string>
+    <string name="text_add_buy">添加求购</string>
+    <string name="text_my_sell">我的求购</string>
+    <string name="text_my_buy">我的求售</string>
 </resources>

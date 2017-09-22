@@ -1,0 +1,216 @@
+-- Merging decision tree log ---
+manifest
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:2:1-95:12
+	package
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:3:5-45
+		INJECTED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml
+		INJECTED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml
+		INJECTED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml
+		INJECTED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml
+uses-permission#android.permission.VIBRATE
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:6:5-66
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:6:22-63
+uses-permission#android.permission.INTERNET
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:7:5-67
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:7:22-64
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:8:5-71
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:8:22-68
+uses-permission#android.permission.CAMERA
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:9:5-65
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:9:22-62
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:10:5-79
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:10:22-76
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:11:5-81
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:11:22-78
+uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:12:5-84
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:12:22-81
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:13:5-79
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:13:22-76
+uses-permission#android.permission.GET_TASKS
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:14:5-68
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:14:22-65
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:15:5-76
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:15:22-73
+uses-permission#android.permission.WAKE_LOCK
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:16:5-68
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:16:22-65
+uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:17:5-80
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:17:22-77
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:18:5-75
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:18:22-72
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:19:5-81
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:19:22-78
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:20:5-73
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:20:22-70
+application
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:22:5-93:19
+MERGED from [com.android.support:appcompat-v7:24.2.1] C:\Users\wsg\.android\build-cache\2f155ce9c169d3a59f1e886bee174e7f662dae5b\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.2.1] C:\Users\wsg\.android\build-cache\eef79815928e910f5980fa7cfafffd6e173680f9\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:24.2.1] C:\Users\wsg\.android\build-cache\1b422b3c6b8783a5ec288b3dc4e636c5005ccf88\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\Users\wsg\.android\build-cache\cdc472daceac2f86e43aa35b8eb04d4ba4a12e8f\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\Users\wsg\.android\build-cache\219f48e57fde2ebba7a116f6af1c4ab931e2c4ac\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\Users\wsg\.android\build-cache\85790bf61251f506f674aea1472e2d02590531c8\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\Users\wsg\.android\build-cache\16682f38ad5142d9467b73164c71acd03277392f\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\Users\wsg\.android\build-cache\7e01c764b20e67e3b374b425c51cd4d0ffd2c83d\output\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\Users\wsg\.android\build-cache\4bf9cd8fdf16c87364b178d063ef13ca5c8dd824\output\AndroidManifest.xml:25:5-20
+	android:label
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:26:9-41
+	android:allowBackup
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:24:9-35
+	android:icon
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:25:9-45
+	android:theme
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:27:9-40
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:23:9-39
+activity#com.hyphenate.easeuisimpledemo.ui.LoginActivity
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:29:9-39:20
+	android:screenOrientation
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:32:13-49
+	android:launchMode
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:31:13-43
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:30:13-45
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:34:13-38:29
+action#android.intent.action.MAIN
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:35:17-69
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:35:25-66
+category#android.intent.category.LAUNCHER
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:37:17-77
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:37:27-74
+activity#com.hyphenate.easeuisimpledemo.ui.MainActivity
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:41:9-46:15
+	android:screenOrientation
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:44:13-49
+	android:launchMode
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:43:13-44
+	android:windowSoftInputMode
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:45:13-52
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:42:13-44
+activity#com.hyphenate.easeuisimpledemo.ui.ChatActivity
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:48:9-52:15
+	android:screenOrientation
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:50:13-49
+	android:launchMode
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:49:13-44
+	android:windowSoftInputMode
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:51:13-55
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:48:19-50
+activity#com.hyphenate.easeui.ui.EaseBaiduMapActivity
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:53:9-56:15
+	android:screenOrientation
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:55:13-49
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:54:13-72
+activity#com.hyphenate.easeui.ui.EaseShowBigImageActivity
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:58:9-61:15
+	android:screenOrientation
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:60:13-49
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:59:13-76
+meta-data#EASEMOB_APPKEY
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:64:9-66:57
+	android:value
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:66:13-54
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:65:13-42
+service#com.hyphenate.chat.EMChatService
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:68:9-70:39
+	android:exported
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:70:13-36
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:69:13-60
+receiver#com.hyphenate.chat.EMMonitorReceiver
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:72:9-83:20
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:72:19-70
+intent-filter#android.intent.action.PACKAGE_REMOVED
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:73:13-77:29
+action#android.intent.action.PACKAGE_REMOVED
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:74:17-80
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:74:25-77
+data
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:76:17-50
+	android:scheme
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:76:23-47
+intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.action.USER_PRESENT
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:79:13-82:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:80:17-79
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:80:25-76
+action#android.intent.action.USER_PRESENT
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:81:17-77
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:81:25-74
+service#com.baidu.location.f
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:86:9-89:41
+	android:enabled
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:88:13-35
+	android:process
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:89:13-38
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:87:13-48
+meta-data#com.baidu.lbsapi.API_KEY
+ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:90:9-92:64
+	android:value
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:92:13-61
+	android:name
+		ADDED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml:91:13-52
+uses-sdk
+INJECTED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [XSYTrade:easeui:unspecified] G:\git\XSY-University-trade\XSYTrade\easeui\build\intermediates\bundles\default\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:appcompat-v7:24.2.1] C:\Users\wsg\.android\build-cache\2f155ce9c169d3a59f1e886bee174e7f662dae5b\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:24.2.1] C:\Users\wsg\.android\build-cache\eef79815928e910f5980fa7cfafffd6e173680f9\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:24.2.1] C:\Users\wsg\.android\build-cache\1b422b3c6b8783a5ec288b3dc4e636c5005ccf88\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\Users\wsg\.android\build-cache\cdc472daceac2f86e43aa35b8eb04d4ba4a12e8f\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\Users\wsg\.android\build-cache\219f48e57fde2ebba7a116f6af1c4ab931e2c4ac\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\Users\wsg\.android\build-cache\85790bf61251f506f674aea1472e2d02590531c8\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\Users\wsg\.android\build-cache\16682f38ad5142d9467b73164c71acd03277392f\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\Users\wsg\.android\build-cache\7e01c764b20e67e3b374b425c51cd4d0ffd2c83d\output\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-compat:24.2.1] C:\Users\wsg\.android\build-cache\4bf9cd8fdf16c87364b178d063ef13ca5c8dd824\output\AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:24.2.1] C:\Users\wsg\.android\build-cache\2f155ce9c169d3a59f1e886bee174e7f662dae5b\output\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml
+		INJECTED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml
+		INJECTED from G:\git\XSY-University-trade\XSYTrade\simpledemo\src\main\AndroidManifest.xml

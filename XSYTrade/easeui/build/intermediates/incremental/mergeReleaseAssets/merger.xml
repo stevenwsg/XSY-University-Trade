@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="G:\git\XSY-University-trade\XSYTrade\easeui\src\main\assets"/><source path="G:\git\XSY-University-trade\XSYTrade\easeui\build\generated\assets\shaders\release"/></dataSet><dataSet config="release"><source path="G:\git\XSY-University-trade\XSYTrade\easeui\src\release\assets"/></dataSet></merger>

@@ -1,11 +1,32 @@
 package com.wsg.xsytrade.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import com.wsg.xsytrade.R;
+import com.wsg.xsytrade.adapter.BuyAdapter;
+import com.wsg.xsytrade.entity.Buy;
+import com.wsg.xsytrade.ui.NewBuyActivity;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import butterknife.Unbinder;
+import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.FindListener;
 
 /**
  * 项目名：XSYTrade
@@ -13,13 +34,101 @@ import com.wsg.xsytrade.R;
  * 文件名：BuyFragment
  * 创建者：wsg
  * 创建时间：2017/9/16  21:37
- * 描述：闲置求购
+ * 描述：闲置求售
  */
 
-public class BuyFragment extends android.support.v4.app.Fragment {
+public class BuyFragment extends Fragment {
+
+
+    @BindView(R.id.buy_swipe_refresh)
+    SwipeRefreshLayout buySwipeRefresh;
+
+    private List<Buy> mList = new ArrayList<>();
+    private BuyAdapter adapter;
+
+    @BindView(R.id.buy_ed)
+    EditText buyEd;
+    @BindView(R.id.buy_search)
+    ImageView buySearch;
+    @BindView(R.id.buy_write)
+    ImageView buyWrite;
+    @BindView(R.id.buy_lv)
+    ListView buyLv;
+    Unbinder unbinder;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_buy, null);
+        unbinder = ButterKnife.bind(this, view);
+        initView();
         return view;
+    }
+
+    private void initView() {
+        buySwipeRefresh.setColorSchemeResources(R.color.colorPrimary);   //设置下拉刷新进度条的颜色
+        buySwipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                onResume();   //进行刷新操作
+                buySwipeRefresh.setRefreshing(false);
+            }
+
+
+
+        });
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
+    }
+
+    @OnClick({R.id.buy_search, R.id.buy_write})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.buy_search:
+                //// TODO: 2017/9/22
+                break;
+            case R.id.buy_write:
+                //添加的逻辑
+                startActivity(new Intent(getActivity(), NewBuyActivity.class));
+                break;
+        }
+    }
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+         /*
+        1、获取数据
+        2、将数据添加到集合
+        3、设置适配器
+         */
+
+        //1、获取表中存放的数据
+        BmobQuery<Buy> query = new BmobQuery<Buy>();
+        //返回50条数据，如果不加上这条语句，默认返回10条数据
+        query.setLimit(50);
+        //按照时间降序
+        query.order("-createdAt");
+        //执行查询，第一个参数为上下文，第二个参数为查找的回调
+        query.findObjects(new FindListener<Buy>() {
+            @Override
+            public void done(List<Buy> list, BmobException e) {
+                if (e == null) {
+                    //2、已经获取到集合
+
+                    //3、设置适配器
+                    adapter = new BuyAdapter(getActivity(), list);
+                    buyLv.setAdapter(adapter);
+
+                } else {
+                    Toast.makeText(getActivity(), "数据获取失败，请检查网络，亲~~~", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
     }
 }

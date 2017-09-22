@@ -3,6 +3,7 @@ package com.wsg.xsytrade.ui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -11,10 +12,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.hyphenate.EMCallBack;
+import com.hyphenate.chat.EMClient;
+import com.hyphenate.exceptions.HyphenateException;
 import com.wsg.xsytrade.MainActivity;
 import com.wsg.xsytrade.R;
 import com.wsg.xsytrade.base.BaseActivity;
 import com.wsg.xsytrade.entity.MyUser;
+import com.wsg.xsytrade.util.StaticClass;
 import com.wsg.xsytrade.view.CustomDialog;
 
 import butterknife.BindView;
@@ -71,8 +76,8 @@ public class LoginActivity extends BaseActivity {
         switch (view.getId()) {
             case R.id.btnLogin:
                 //1.获取输入框的值
-                String name = etName.getText().toString().trim();
-                String password = etPassword.getText().toString().trim();
+                final String name = etName.getText().toString().trim();
+                final String password = etPassword.getText().toString().trim();
                 //2.判断是否为空
                 if (!TextUtils.isEmpty(name) & !TextUtils.isEmpty(password)) {
                     dialog.show();
@@ -87,7 +92,52 @@ public class LoginActivity extends BaseActivity {
                             //判断结果
                             if (e == null) {
 
-                                    //跳转
+
+                                //注册easy_ui实现登录，聊天
+
+                                StaticClass.EASY_NAME=name;
+                                StaticClass.EASY_PWD=password;
+
+                                //注册失败会抛出HyphenateException
+
+                                new Thread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        try {
+                                            EMClient.getInstance().createAccount(name,
+                                                    password);
+                                        } catch (HyphenateException e) {
+                                            e.printStackTrace();
+                                            Log.i("lf","注册失败  "+e.getErrorCode()+" , "+e.getMessage());
+                                        }
+                                    }
+                                }).start();
+
+
+                                //实现easy_ui的登录
+                                //根据官方文档所述，可实现自动登录，不知道怎么实现的，现在先摸摸完成项目吧~~~~~~~~~~以后研究
+                                EMClient.getInstance().login(name,password,new EMCallBack() {//回调
+                                    @Override
+                                    public void onSuccess() {
+                                        EMClient.getInstance().groupManager().loadAllGroups();
+                                        EMClient.getInstance().chatManager().loadAllConversations();
+                                        Log.d("main", "登录聊天服务器成功！");
+
+                                    }
+
+                                    @Override
+                                    public void onProgress(int progress, String status) {
+
+                                    }
+
+                                    @Override
+                                    public void onError(int code, String message) {
+                                        Log.d("main", "登录聊天服务器失败！");
+                                    }
+                                });
+
+
+                                //跳转
                                     startActivity(new Intent(LoginActivity.this, MainActivity.class));
                                     finish();
 

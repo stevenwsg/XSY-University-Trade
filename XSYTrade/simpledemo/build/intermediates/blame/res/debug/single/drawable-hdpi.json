@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\simpledemo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\em_conversation_normal.png",
+        "source": "G:\\git\\XSY-University-trade\\XSYTrade\\simpledemo\\src\\main\\res\\drawable-hdpi\\em_conversation_normal.png"
+    },
+    {
+        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\simpledemo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\em_unread_count_bg.9.png",
+        "source": "G:\\git\\XSY-University-trade\\XSYTrade\\simpledemo\\src\\main\\res\\drawable-hdpi\\em_unread_count_bg.9.png"
+    },
+    {
+        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\simpledemo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\em_contact_list_selected.png",
+        "source": "G:\\git\\XSY-University-trade\\XSYTrade\\simpledemo\\src\\main\\res\\drawable-hdpi\\em_contact_list_selected.png"
+    },
+    {
+        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\simpledemo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\em_contact_list_normal.png",
+        "source": "G:\\git\\XSY-University-trade\\XSYTrade\\simpledemo\\src\\main\\res\\drawable-hdpi\\em_contact_list_normal.png"
+    },
+    {
+        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\simpledemo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_launcher.png",
+        "source": "G:\\git\\XSY-University-trade\\XSYTrade\\simpledemo\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\simpledemo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\em_conversation_selected.png",
+        "source": "G:\\git\\XSY-University-trade\\XSYTrade\\simpledemo\\src\\main\\res\\drawable-hdpi\\em_conversation_selected.png"
+    },
+    {
+        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\simpledemo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\em_settings_selected.png",
+        "source": "G:\\git\\XSY-University-trade\\XSYTrade\\simpledemo\\src\\main\\res\\drawable-hdpi\\em_settings_selected.png"
+    },
+    {
+        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\simpledemo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\em_settings_normal.png",
+        "source": "G:\\git\\XSY-University-trade\\XSYTrade\\simpledemo\\src\\main\\res\\drawable-hdpi\\em_settings_normal.png"
+    }
+]

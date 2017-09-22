@@ -2,7 +2,6 @@ package com.wsg.xsytrade.ui;
 
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -71,9 +70,9 @@ public class BackActivity extends BaseActivity {
             @Override
             public void done(String s, BmobException e) {
                 if(e==null){
-                    Log.i("bmob","数据创建成功");
+                    Toast.makeText(getApplicationContext(),"反馈成功~~~",Toast.LENGTH_SHORT).show();
                 }else{
-                    Log.i("bmob","失败："+e.getMessage()+","+e.getErrorCode());
+                    Toast.makeText(BackActivity.this,"反馈失败~~~",Toast.LENGTH_SHORT).show();
                 }
             }
         });

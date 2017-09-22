@@ -142,7 +142,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:text="我的出售"
+            android:text="我的求购"
             android:textSize="20dp"/>
 
         <View
@@ -159,7 +159,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:text="我的求购"
+            android:text="我的求售"
             android:textSize="20dp"/>
 
         <View

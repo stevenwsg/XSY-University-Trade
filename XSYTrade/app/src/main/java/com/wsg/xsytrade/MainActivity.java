@@ -8,8 +8,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 
+import com.hyphenate.easeui.ui.EaseConversationListFragment;
 import com.wsg.xsytrade.fragment.BuyFragment;
-import com.wsg.xsytrade.fragment.MessageFragment;
 import com.wsg.xsytrade.fragment.SellFragment;
 import com.wsg.xsytrade.fragment.UserFragment;
 import com.wsg.xsytrade.util.ShareUtils;
@@ -24,7 +24,7 @@ import butterknife.ButterKnife;
 
 //主页面
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     @BindView(R.id.mViewPager)
     ViewPager mViewPager;
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         //去掉阴影
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         mFragment = new ArrayList<>();
         mFragment.add(new SellFragment());
         mFragment.add(new BuyFragment());
-        mFragment.add(new MessageFragment());
+        mFragment.add(new EaseConversationListFragment());
         mFragment.add(new UserFragment());
 
     }
