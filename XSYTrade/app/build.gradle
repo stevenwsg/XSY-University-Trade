@@ -53,5 +53,4 @@ dependencies {
         exclude group: 'io.reactivex:rxjava'
         exclude group: 'com.squareup.okio'
     }
-    compile project(':easeui')
 }

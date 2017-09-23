@@ -22,16 +22,43 @@ import java.util.List;
  * 描述：闲置求购适配器
  */
 
-public class SellAdapter extends BaseAdapter {
+public class SellAdapter extends BaseAdapter implements View.OnClickListener {
     private Context mContext;
     private List<Sell> mList;
     //布局加载器
     private LayoutInflater inflater;
     private Sell data;
 
-    public SellAdapter(Context mContext, List<Sell> mList) {
+        private Callback mCallback;
+
+
+           /**
+
+            * 自定义接口，用于回调按钮点击事件到Activity
+
+            * @author Ivan Xu
+
+            * 2014-11-26
+
+            */
+
+
+
+
+
+           public interface Callback {
+
+               public void click(View v);
+
+           }
+
+
+
+
+    public SellAdapter(Context mContext, List<Sell> mList, Callback callback) {
         this.mContext = mContext;
         this.mList = mList;
+        mCallback = callback;
         //获取系统服务
         inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
@@ -79,10 +106,20 @@ public class SellAdapter extends BaseAdapter {
         viewHolder1.tv_name.setText(data.getName());
         viewHolder1.tv_title.setText(data.getTitle());
         viewHolder1.tv_content.setText(data.getContent());
+
+
+        viewHolder1.iv_message.setOnClickListener(this);
+        viewHolder1.iv_message.setTag(i);
+
+
         return view;
     }
 
-
+    //响应按钮点击事件,调用子定义接口，并传入View
+    @Override
+    public void onClick(View view) {
+        mCallback.click(view);
+    }
 
 
     class ViewHolder{
@@ -92,6 +129,13 @@ public class SellAdapter extends BaseAdapter {
         private TextView tv_content;
         private  ImageView iv_message;
     }
+
+
+
+
+
+
+
 
 
 

@@ -8,8 +8,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 
-import com.hyphenate.easeui.ui.EaseConversationListFragment;
 import com.wsg.xsytrade.fragment.BuyFragment;
+import com.wsg.xsytrade.fragment.MessageFragment;
 import com.wsg.xsytrade.fragment.SellFragment;
 import com.wsg.xsytrade.fragment.UserFragment;
 import com.wsg.xsytrade.util.ShareUtils;
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity{
         mFragment = new ArrayList<>();
         mFragment.add(new SellFragment());
         mFragment.add(new BuyFragment());
-        mFragment.add(new EaseConversationListFragment());
+        mFragment.add(new MessageFragment());
         mFragment.add(new UserFragment());
 
     }

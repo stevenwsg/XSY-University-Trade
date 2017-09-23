@@ -8,9 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.wsg.xsytrade.R;
 import com.wsg.xsytrade.entity.Sell;
-import com.wsg.xsytrade.util.L;
 
 import java.util.List;
 
@@ -20,7 +18,7 @@ import java.util.List;
  * 文件名：MySellAdapter
  * 创建者：wsg
  * 创建时间：2017/9/22  20:47
- * 描述：TODO
+ * 描述：我的求购
  */
 
 public class MySellAdapter extends BaseAdapter {
@@ -30,6 +28,8 @@ public class MySellAdapter extends BaseAdapter {
     //布局加载器
     private LayoutInflater inflater;
     private Sell data;
+
+
 
     public MySellAdapter(Context mContext, List<Sell> mList) {
         this.mContext = mContext;
@@ -60,10 +60,10 @@ public class MySellAdapter extends BaseAdapter {
         //如果是第一次加载
         if(view==null){
             viewHolder1=new ViewHolder();
-            view=inflater.inflate(R.layout.item_mysell,null);
-            viewHolder1.mysell_tv_title=(TextView)view.findViewById(R.id.mysell_item_title);
-            viewHolder1.mysell_iv_modify=(ImageView)view.findViewById(R.id.mysell_item_modify);
-            viewHolder1.mysll_iv_delete=(ImageView) view.findViewById(R.id.mysell_item_delete);
+            view=inflater.inflate(com.wsg.xsytrade.R.layout.item_mysell,null);
+            viewHolder1.mysell_tv_title=(TextView)view.findViewById(com.wsg.xsytrade.R.id.mysell_item_title);
+            viewHolder1.mysell_iv_modify=(ImageView)view.findViewById(com.wsg.xsytrade.R.id.mysell_item_modify);
+            viewHolder1.mysll_iv_delete=(ImageView) view.findViewById(com.wsg.xsytrade.R.id.mysell_item_delete);
             //设置缓存
             view.setTag(viewHolder1);
         }
@@ -74,9 +74,11 @@ public class MySellAdapter extends BaseAdapter {
 
         //设置数据
         data=mList.get(i);
-       viewHolder1.mysell_tv_title.setText(data.getTitle());
+//        L.d(Integer.toString(mList.size()));
+//        L.d(data.getTitle());
+        viewHolder1.mysell_tv_title.setText(data.getTitle());
 
-        L.d(data.getTitle());
+//        L.d(data.getTitle());
         return view;
     }
 

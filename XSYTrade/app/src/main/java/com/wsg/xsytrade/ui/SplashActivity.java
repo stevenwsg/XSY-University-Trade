@@ -9,6 +9,8 @@ import android.support.annotation.Nullable;
 
 import com.wsg.xsytrade.MainActivity;
 import com.wsg.xsytrade.R;
+import com.wsg.xsytrade.runtimepermissions.PermissionsManager;
+import com.wsg.xsytrade.runtimepermissions.PermissionsResultAction;
 import com.wsg.xsytrade.util.ShareUtils;
 import com.wsg.xsytrade.util.StaticClass;
 
@@ -52,6 +54,24 @@ public class SplashActivity extends Activity {
     }
 
     private void initView() {
+
+
+        /**
+         * 请求所有必要的权限----原理就是获取清单文件中申请的权限
+         */
+        PermissionsManager.getInstance().requestAllManifestPermissionsIfNecessary(this, new PermissionsResultAction() {
+            @Override
+            public void onGranted() {
+//              Toast.makeText(MainActivity.this, "All permissions have been granted", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onDenied(String permission) {
+                //Toast.makeText(MainActivity.this, "Permission " + permission + " has been denied", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
         //延时2000ms
         handler.sendEmptyMessageDelayed(StaticClass.HANDLER_SPLASH, 2000);
 

@@ -6,7 +6,7 @@ package com.wsg.xsytrade.entity;
  * 文件名：MySell
  * 创建者：wsg
  * 创建时间：2017/9/22  20:37
- * 描述：TODO
+ * 描述：我的求购实体
  */
 
 public class MySell {

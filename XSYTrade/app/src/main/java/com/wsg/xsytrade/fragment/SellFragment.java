@@ -28,6 +28,7 @@ import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;
 
+
 /**
  * 项目名：XSYTrade
  * 包名：com.wsg.xsytrade.fragment
@@ -37,7 +38,7 @@ import cn.bmob.v3.listener.FindListener;
  * 描述：闲置求购
  */
 
-public class SellFragment extends Fragment {
+public class SellFragment extends Fragment implements SellAdapter.Callback{
 
     @BindView(R.id.swipe_refresh)
     SwipeRefreshLayout swipeRefresh;
@@ -45,6 +46,7 @@ public class SellFragment extends Fragment {
     private String msearch;
     private List<Sell> mList = new ArrayList<>();
     private SellAdapter adapter;
+
 
     @BindView(R.id.sell_ed)
     EditText sellEd;
@@ -67,6 +69,11 @@ public class SellFragment extends Fragment {
     }
 
     private void initView() {
+
+        adapter = new SellAdapter(getActivity(), mList,this);
+        sellLv.setAdapter(adapter);
+
+
         swipeRefresh.setColorSchemeResources(R.color.colorPrimary);   //设置下拉刷新进度条的颜色
         swipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -128,10 +135,9 @@ public class SellFragment extends Fragment {
             public void done(List<Sell> list, BmobException e) {
                 if (e == null) {
                     //2、已经获取到集合
-
-                    //3、设置适配器
-                    adapter = new SellAdapter(getActivity(), list);
-                    sellLv.setAdapter(adapter);
+                    mList.clear();
+                    mList.addAll(list);
+                    adapter.notifyDataSetChanged();
                 } else {
                     Toast.makeText(getActivity(), "数据获取失败，请检查网络，亲~~~", Toast.LENGTH_SHORT).show();
                 }
@@ -141,6 +147,20 @@ public class SellFragment extends Fragment {
     }
 
 
+    @Override
+    public void click(View v) {
 
+        int i=(Integer) v.getTag();
+
+        String name =mList.get(i).getName();
+
+
+
+
+
+//                Toast.makeText(getActivity(),
+//                                "listview的内部的按钮被点击了！，位置是-->" + (Integer) v.getTag() + ",内容是-->",
+//                        Toast.LENGTH_SHORT).show();
+    }
 
 }
