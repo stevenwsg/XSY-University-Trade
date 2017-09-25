@@ -3,6 +3,7 @@ package com.wsg.xsytrade.ui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +12,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.hyphenate.EMCallBack;
+import com.hyphenate.chat.EMClient;
+import com.hyphenate.exceptions.HyphenateException;
 import com.wsg.xsytrade.MainActivity;
 import com.wsg.xsytrade.R;
 import com.wsg.xsytrade.base.BaseActivity;
@@ -20,6 +24,7 @@ import com.wsg.xsytrade.view.CustomDialog;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -86,6 +91,54 @@ public class LoginActivity extends BaseActivity {
                             dialog.dismiss();
                             //判断结果
                             if (e == null) {
+
+
+
+                                //注册环信  实现登录
+
+                                //开启线程
+
+                                new Thread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        //因为环信的id不能重复，那咋们就是用 bmob用户系统的objectid吧
+
+                                        MyUser userInfo = BmobUser.getCurrentUser(MyUser.class);
+                                        String n=userInfo.getUsername();
+
+                                        //注册环信用户
+
+                                        try {
+                                            EMClient.getInstance().createAccount(n,password);//同步方法
+                                        } catch (HyphenateException e1) {
+                                            e1.printStackTrace();
+                                        }
+                                        //登录环信
+
+                                        EMClient.getInstance().login(n,password,new EMCallBack() {//回调
+                                            @Override
+                                            public void onSuccess() {
+                                                EMClient.getInstance().groupManager().loadAllGroups();
+                                                EMClient.getInstance().chatManager().loadAllConversations();
+                                                Log.d("main", "登录聊天服务器成功！");
+                                            }
+
+                                            @Override
+                                            public void onProgress(int progress, String status) {
+
+                                            }
+
+                                            @Override
+                                            public void onError(int code, String message) {
+                                                Log.d("main", "登录聊天服务器失败！");
+                                            }
+                                        });
+
+
+
+                                    }
+                                }).start();
+
 
 
 

@@ -12,10 +12,14 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.hyphenate.chat.EMMessage;
+import com.hyphenate.easeui.EaseConstant;
 import com.wsg.xsytrade.R;
 import com.wsg.xsytrade.adapter.BuyAdapter;
 import com.wsg.xsytrade.entity.Buy;
+import com.wsg.xsytrade.ui.ChatActivity;
 import com.wsg.xsytrade.ui.NewBuyActivity;
+import com.wsg.xsytrade.util.L;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +41,7 @@ import cn.bmob.v3.listener.FindListener;
  * 描述：闲置求售
  */
 
-public class BuyFragment extends Fragment {
+public class BuyFragment extends Fragment implements BuyAdapter.Callback {
 
 
     @BindView(R.id.buy_swipe_refresh)
@@ -65,6 +69,14 @@ public class BuyFragment extends Fragment {
     }
 
     private void initView() {
+
+
+        //2、已经获取到集合
+
+        //3、设置适配器
+        adapter = new BuyAdapter(getActivity(), mList,this);
+        buyLv.setAdapter(adapter);
+
         buySwipeRefresh.setColorSchemeResources(R.color.colorPrimary);   //设置下拉刷新进度条的颜色
         buySwipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -118,17 +130,34 @@ public class BuyFragment extends Fragment {
             @Override
             public void done(List<Buy> list, BmobException e) {
                 if (e == null) {
-                    //2、已经获取到集合
 
-                    //3、设置适配器
-                    adapter = new BuyAdapter(getActivity(), list);
-                    buyLv.setAdapter(adapter);
+                    mList.addAll(list);
+                    adapter.notifyDataSetChanged();
 
                 } else {
                     Toast.makeText(getActivity(), "数据获取失败，请检查网络，亲~~~", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
+    }
+
+    @Override
+    public void click(View v) {
+        int i=(Integer) v.getTag();
+
+
+        String name =mList.get(i).getName();
+
+
+
+
+        Intent chat = new Intent(getActivity(),ChatActivity.class);
+        L.d(EaseConstant.EXTRA_USER_ID);
+        L.d(name);
+        chat.putExtra(EaseConstant.EXTRA_USER_ID,name);  //对方账号
+        chat.putExtra(EaseConstant.EXTRA_CHAT_TYPE, EMMessage.ChatType.Chat); //单聊模式
+        startActivity(chat);
 
     }
 }

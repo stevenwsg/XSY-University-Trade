@@ -12,10 +12,13 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.hyphenate.easeui.EaseConstant;
 import com.wsg.xsytrade.R;
 import com.wsg.xsytrade.adapter.SellAdapter;
 import com.wsg.xsytrade.entity.Sell;
+import com.wsg.xsytrade.ui.ChatActivity;
 import com.wsg.xsytrade.ui.NewSellActivity;
+import com.wsg.xsytrade.util.L;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -154,6 +157,17 @@ public class SellFragment extends Fragment implements SellAdapter.Callback{
 
         String name =mList.get(i).getName();
 
+
+        L.d(EaseConstant.EXTRA_USER_ID);
+        L.d(name);
+
+
+        Intent chat = new Intent(getActivity(),ChatActivity.class);
+        chat.putExtra(EaseConstant.EXTRA_USER_ID,name);  //对方账号
+        chat.putExtra(EaseConstant.EXTRA_CHAT_TYPE, EaseConstant.CHATTYPE_SINGLE); //单聊模式
+
+
+        startActivity(chat);
 
 
 

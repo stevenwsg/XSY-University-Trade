@@ -1,6 +1,7 @@
 package com.wsg.xsytrade.ui;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -10,6 +11,7 @@ import com.wsg.xsytrade.base.BaseActivity;
 import com.wsg.xsytrade.entity.Buy;
 import com.wsg.xsytrade.entity.MyUser;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -18,6 +20,9 @@ import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;
+
+import static com.wsg.xsytrade.R.id.mybuy_item_delete;
+import static com.wsg.xsytrade.R.id.mybuy_item_modify;
 
 /**
  * 项目名：XSYTrade
@@ -28,18 +33,23 @@ import cn.bmob.v3.listener.FindListener;
  * 描述：我得求售
  */
 
-public class MyBuyActivity extends BaseActivity {
+public class MyBuyActivity extends BaseActivity implements MyBuyAdapter.Callback {
 
     private MyBuyAdapter adapter;
 
     @BindView(R.id.mybuy_lv)
     ListView mybuyLv;
+    private List<Buy> mList=new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mybuy);
         ButterKnife.bind(this);
+
+        //3、设置适配器
+        adapter = new MyBuyAdapter(MyBuyActivity.this, mList,this);
+        mybuyLv.setAdapter(adapter);
     }
 
 
@@ -76,10 +86,8 @@ public class MyBuyActivity extends BaseActivity {
             public void done(List<Buy> list, BmobException e) {
                 if (e == null) {
                     //2、已经获取到集合
-
-                    //3、设置适配器
-                    adapter = new MyBuyAdapter(MyBuyActivity.this, list);
-                    mybuyLv.setAdapter(adapter);
+                    mList.addAll(list);
+                    adapter.notifyDataSetChanged();
                 } else {
                     Toast.makeText(MyBuyActivity.this, "数据获取失败，请检查网络，亲~~~", Toast.LENGTH_SHORT).show();
                 }
@@ -87,5 +95,36 @@ public class MyBuyActivity extends BaseActivity {
         });
 
 
+    }
+
+    @Override
+    public void click(View v) {
+        int i=(Integer) v.getTag();
+        switch (v.getId()){
+            case mybuy_item_modify:
+                break;
+            case mybuy_item_delete:
+
+                Toast.makeText(this,"测试——删除",Toast.LENGTH_SHORT).show();
+
+//                Buy b=new Buy();
+//                b.setObjectId(mList.get(i).getObjectId());
+//                b.delete(new UpdateListener() {
+//                    @Override
+//                    public void done(BmobException e) {
+//
+//                        if(e==null){
+//                            toast("删除成功:");
+//                            mList.clear();
+//                            onResume();
+//                        }else{
+//                            toast("删除失败：" + e.getMessage());
+//                        }
+//                    }
+//                });
+//
+//
+//                break;
+        }
     }
 }

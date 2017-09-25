@@ -22,7 +22,7 @@ import java.util.List;
  * 描述：我的求售
  */
 
-public class MyBuyAdapter extends BaseAdapter {
+public class MyBuyAdapter extends BaseAdapter implements View.OnClickListener {
 
 
     private Context mContext;
@@ -31,12 +31,24 @@ public class MyBuyAdapter extends BaseAdapter {
     private LayoutInflater inflater;
     private Buy data;
 
+    private Callback mCallback;
 
-    public MyBuyAdapter(Context mContext, List<Buy> mList) {
+    @Override
+    public void onClick(View view) {
+        mCallback.click(view);
+    }
+
+    public interface Callback {
+         public void click(View v);
+     }
+
+
+    public MyBuyAdapter(Context mContext, List<Buy> mList, Callback callback) {
         this.mContext = mContext;
         this.mList = mList;
         //获取系统服务
         inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        mCallback=callback;
     }
 
     @Override
@@ -75,7 +87,18 @@ public class MyBuyAdapter extends BaseAdapter {
 
         //设置数据
         data=mList.get(i);
+
+
         viewHolder1.mybuy_tv_title.setText(data.getTitle());
+
+
+
+        viewHolder1.mybuy_iv_modify.setTag(i);
+        viewHolder1.mybuy_iv_modify.setOnClickListener(this);
+
+
+        viewHolder1.mybuy_iv_delete.setTag(i);
+        viewHolder1.mybuy_iv_modify.setOnClickListener(this);
 
 //        L.d(data.getTitle());
         return view;

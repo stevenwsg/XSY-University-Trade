@@ -22,7 +22,7 @@ import java.util.List;
  * 描述：闲置求售的逻辑
  */
 
-public class BuyAdapter extends BaseAdapter {
+public class BuyAdapter extends BaseAdapter implements View.OnClickListener {
 
     private Context mContext;
     private List<Buy> mList;
@@ -30,11 +30,26 @@ public class BuyAdapter extends BaseAdapter {
     private LayoutInflater inflater;
     private Buy data;
 
-    public BuyAdapter(Context mContext, List<Buy> mList) {
+
+    private Callback mCallback;
+
+    @Override
+    public void onClick(View view) {
+        mCallback.click(view);
+    }
+
+    public interface Callback {
+        public void click(View v);
+    }
+
+
+
+    public BuyAdapter(Context mContext, List<Buy> mList, Callback callback) {
         this.mContext = mContext;
         this.mList = mList;
         //获取系统服务
         inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        mCallback=callback;
     }
 
     @Override
@@ -72,6 +87,9 @@ public class BuyAdapter extends BaseAdapter {
         }
         else {
             viewHolder1 = (ViewHolder)view.getTag();
+
+            viewHolder1.iv_message.setOnClickListener(this);
+            viewHolder1.iv_message.setTag(i);
         }
 
 

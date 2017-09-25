@@ -21,7 +21,7 @@ import java.util.List;
  * 描述：我的求购
  */
 
-public class MySellAdapter extends BaseAdapter {
+public class MySellAdapter extends BaseAdapter implements View.OnClickListener {
 
     private Context mContext;
     private List<Sell> mList;
@@ -29,13 +29,25 @@ public class MySellAdapter extends BaseAdapter {
     private LayoutInflater inflater;
     private Sell data;
 
+    private Callback mCallback;
+
+    @Override
+    public void onClick(View view) {
+        mCallback.click(view);
+    }
+
+    public interface Callback {
+         public void click(View v);
+     }
 
 
-    public MySellAdapter(Context mContext, List<Sell> mList) {
+
+    public MySellAdapter(Context mContext, List<Sell> mList,Callback callback) {
         this.mContext = mContext;
         this.mList = mList;
         //获取系统服务
         inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        mCallback=callback;
     }
 
     @Override
@@ -69,6 +81,9 @@ public class MySellAdapter extends BaseAdapter {
         }
         else {
             viewHolder1 = (ViewHolder)view.getTag();
+
+
+
         }
 
 
@@ -77,6 +92,12 @@ public class MySellAdapter extends BaseAdapter {
 //        L.d(Integer.toString(mList.size()));
 //        L.d(data.getTitle());
         viewHolder1.mysell_tv_title.setText(data.getTitle());
+
+
+        viewHolder1.mysell_iv_modify.setTag(i);
+        viewHolder1.mysell_iv_modify.setOnClickListener(this);
+        viewHolder1.mysll_iv_delete.setTag(i);
+        viewHolder1.mysll_iv_delete.setOnClickListener(this);
 
 //        L.d(data.getTitle());
         return view;

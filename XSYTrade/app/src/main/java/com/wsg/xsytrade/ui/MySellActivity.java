@@ -1,6 +1,8 @@
 package com.wsg.xsytrade.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -19,6 +21,9 @@ import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;
+import cn.bmob.v3.listener.UpdateListener;
+
+import static com.kymjs.rxvolley.toolbox.RxVolleyContext.toast;
 
 /**
  * 项目名：XSYTrade
@@ -29,7 +34,7 @@ import cn.bmob.v3.listener.FindListener;
  * 描述：我的求购
  */
 
-public class MySellActivity extends BaseActivity {
+public class MySellActivity extends BaseActivity implements MySellAdapter.Callback {
     private List<Sell> mList = new ArrayList<>();
     private MySellAdapter adapter;
 
@@ -41,7 +46,11 @@ public class MySellActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mysell);
+
         ButterKnife.bind(this);
+        adapter = new MySellAdapter(MySellActivity.this, mList,this);
+        mysellLv.setAdapter(adapter);
+
     }
 
 
@@ -74,11 +83,10 @@ public class MySellActivity extends BaseActivity {
             @Override
             public void done(List<Sell> list, BmobException e) {
                 if (e == null) {
-                    //2、已经获取到集合
 
-                    //3、设置适配器
-                    adapter = new MySellAdapter(MySellActivity.this, list);
-                    mysellLv.setAdapter(adapter);
+                    mList.clear();
+                    mList.addAll(list);
+                    adapter.notifyDataSetChanged();
                 } else {
                     Toast.makeText(MySellActivity.this, "数据获取失败，请检查网络，亲~~~", Toast.LENGTH_SHORT).show();
                 }
@@ -86,4 +94,48 @@ public class MySellActivity extends BaseActivity {
         });
 
     }
+
+
+
+    @Override
+    public void click(View v) {
+
+        int i=(Integer) v.getTag();
+        switch(v.getId()){
+            case R.id.mysell_item_modify:
+//                Toast.makeText(this,"测试——修改",Toast.LENGTH_SHORT).show();
+
+
+//                修改数据的逻辑
+                Intent intent=new Intent(this,ModifyMySellActivity.class);
+                intent.putExtra("id",mList.get(i).getObjectId());
+                startActivity(intent);
+
+
+                break;
+            case R.id.mysell_item_delete:
+//                Toast.makeText(this,"测试——删除",Toast.LENGTH_SHORT).show();
+
+                Sell  s=new Sell();
+                s.setObjectId(mList.get(i).getObjectId());
+                s.delete(new UpdateListener() {
+                    @Override
+                    public void done(BmobException e) {
+
+                        if(e==null){
+                            toast("删除成功:");
+                            mList.clear();
+                            onResume();
+                        }else{
+                            toast("删除失败：" + e.getMessage());
+                        }
+                    }
+                });
+
+
+                break;
+        }
+    }
+
+
 }

@@ -54,4 +54,5 @@
     <string name="text_add_buy">添加求购</string>
     <string name="text_my_sell">我的求购</string>
     <string name="text_my_buy">我的求售</string>
+    <string name="text_modifymysell">修改我的求购</string>
 </resources>
