@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.wsg.xsytrade.R;
 import com.wsg.xsytrade.entity.Sell;
+import com.wsg.xsytrade.util.UtilTools;
 
 import java.util.List;
 
@@ -110,6 +111,10 @@ public class SellAdapter extends BaseAdapter implements View.OnClickListener {
 
         viewHolder1.iv_message.setOnClickListener(this);
         viewHolder1.iv_message.setTag(i);
+
+        if (mList.get(i).getImage()!=null){
+            UtilTools.getImage(mContext,viewHolder1.iv_logo,mList.get(i).getImage());
+        }
 
 
         return view;

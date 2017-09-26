@@ -27,6 +27,7 @@ import com.wsg.xsytrade.ui.MySellActivity;
 import com.wsg.xsytrade.ui.ShareActivity;
 import com.wsg.xsytrade.ui.UpdateActivity;
 import com.wsg.xsytrade.util.L;
+import com.wsg.xsytrade.util.ShareUtils;
 import com.wsg.xsytrade.util.UtilTools;
 import com.wsg.xsytrade.view.CustomDialog;
 
@@ -93,6 +94,7 @@ public class UserFragment extends Fragment implements View.OnClickListener {
     private Button btn_camera;
     private Button btn_picture;
     private Button btn_cancel;
+    private Boolean b;
 
 
     @Override
@@ -126,6 +128,13 @@ public class UserFragment extends Fragment implements View.OnClickListener {
         etAge.setText(userInfo.getAge() + "");
         etSex.setText(userInfo.isSex() ? getString(R.string.text_boy) : getString(R.string.text_girl_f));
         etDesc.setText(userInfo.getDesc());
+
+        b= ShareUtils.getBoolean(getActivity(),"image_modify",false);
+
+        if(b==true){
+            UtilTools.getImageToShare(getActivity(),profileImage);
+        }
+
     }
 
     private void setEnabled(boolean b) {
@@ -300,6 +309,10 @@ public class UserFragment extends Fragment implements View.OnClickListener {
             L.e("uri == null");
             return;
         }
+
+
+
+
         Intent intent = new Intent("com.android.camera.action.CROP");
         intent.setDataAndType(uri, "image/*");
         //设置裁剪

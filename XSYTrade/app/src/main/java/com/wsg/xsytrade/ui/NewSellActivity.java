@@ -30,6 +30,7 @@ import cn.bmob.v3.listener.SaveListener;
 public class NewSellActivity extends BaseActivity {
     private Sell sell;
     private String mname;
+    private String image;
     private String mtitle;
     private  String mcontent;
 
@@ -51,6 +52,7 @@ public class NewSellActivity extends BaseActivity {
     public void onViewClicked() {
         MyUser userInfo = BmobUser.getCurrentUser(MyUser.class);
         mname=userInfo.getUsername();
+        image=userInfo.getImage();
         mtitle=newsellTitle.getText().toString().trim();
         mcontent=newsellContent.getText().toString().trim();
 
@@ -59,6 +61,7 @@ public class NewSellActivity extends BaseActivity {
         if (!TextUtils.isEmpty(mname)&& !TextUtils.isEmpty(mtitle)&&!TextUtils.isEmpty(mcontent)){
             sell=new Sell();
             sell.setName(mname);
+            sell.setImage(image);
             sell.setTitle(mtitle);
             sell.setContent(mcontent);
 

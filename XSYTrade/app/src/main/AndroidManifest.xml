@@ -22,10 +22,10 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.GET_TASKS"/>
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-
+    <!--保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
 
 
@@ -76,6 +76,8 @@
 
         <activity android:name=".ui.ModifyMySellActivity"
             android:label="@string/text_modifymysell"></activity>
+        <activity android:name=".ui.ModifyMyBuyActivity"
+            android:label="@string/text_modifymybuy"></activity>
 
 
 

@@ -131,6 +131,7 @@ public class BuyFragment extends Fragment implements BuyAdapter.Callback {
             public void done(List<Buy> list, BmobException e) {
                 if (e == null) {
 
+                    mList.clear();
                     mList.addAll(list);
                     adapter.notifyDataSetChanged();
 

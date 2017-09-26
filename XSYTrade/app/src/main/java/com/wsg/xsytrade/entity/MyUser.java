@@ -15,6 +15,15 @@ public class MyUser extends BmobUser {
     private int age;
     private boolean sex;
     private String desc;
+    private String image;
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 
     public int getAge() {
         return age;

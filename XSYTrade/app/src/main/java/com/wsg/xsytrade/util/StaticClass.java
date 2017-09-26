@@ -22,4 +22,6 @@ public class StaticClass {
     public static String EASY_NAME;
     //EAUIPWD
     public static String EASY_PWD;
+    //个人logo是否更改
+
 }

@@ -31,19 +31,29 @@ public class MyBuyAdapter extends BaseAdapter implements View.OnClickListener {
     private LayoutInflater inflater;
     private Buy data;
 
-    private Callback mCallback;
+
+
+
+     private Callback mCallback;
 
     @Override
     public void onClick(View view) {
         mCallback.click(view);
     }
 
+    /**
+       * 自定义接口，用于回调按钮点击事件到Activity
+       * @author Ivan Xu
+     * 2014-11-26
+      */
+
     public interface Callback {
          public void click(View v);
      }
 
 
-    public MyBuyAdapter(Context mContext, List<Buy> mList, Callback callback) {
+
+    public MyBuyAdapter(Context mContext, List<Buy> mList,Callback callback) {
         this.mContext = mContext;
         this.mList = mList;
         //获取系统服务
@@ -67,7 +77,7 @@ public class MyBuyAdapter extends BaseAdapter implements View.OnClickListener {
     }
 
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
+    public View getView(final int i, View view, ViewGroup viewGroup) {
 
         ViewHolder viewHolder1=null;
         //如果是第一次加载
@@ -93,17 +103,16 @@ public class MyBuyAdapter extends BaseAdapter implements View.OnClickListener {
 
 
 
-        viewHolder1.mybuy_iv_modify.setTag(i);
-        viewHolder1.mybuy_iv_modify.setOnClickListener(this);
-
-
         viewHolder1.mybuy_iv_delete.setTag(i);
+        viewHolder1.mybuy_iv_delete.setOnClickListener(this);
+
+
+        viewHolder1.mybuy_iv_modify.setTag(i);
         viewHolder1.mybuy_iv_modify.setOnClickListener(this);
 
 //        L.d(data.getTitle());
         return view;
     }
-
 
 
 
