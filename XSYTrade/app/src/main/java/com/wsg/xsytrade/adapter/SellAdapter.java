@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.wsg.xsytrade.R;
@@ -92,6 +93,8 @@ public class SellAdapter extends BaseAdapter implements View.OnClickListener {
             viewHolder1.tv_title=(TextView)view.findViewById(R.id.sell_item_title);
             viewHolder1.tv_content=(TextView)view.findViewById(R.id.sell_item_content);
             viewHolder1.iv_message=(ImageView) view.findViewById(R.id.sell_item_message);
+            viewHolder1.ll_ll=(LinearLayout) view.findViewById(R.id.sell_item_ll);
+
 
             //设置缓存
             view.setTag(viewHolder1);
@@ -117,6 +120,40 @@ public class SellAdapter extends BaseAdapter implements View.OnClickListener {
         }
 
 
+        if(!mList.get(i).getPhoto().isEmpty()){
+            int a=mList.get(i).getPhoto().size();
+            ImageView[] imageViews = new ImageView[a];
+            for (int j = 0; j <a; j++) {
+                final ImageView imageView = new ImageView(mContext);
+                imageView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+                UtilTools.getImage(mContext,imageView,mList.get(i).getPhoto().get(j));
+                imageViews[j] = imageView;
+                viewHolder1.ll_ll.addView(imageViews[j]);
+            }
+
+        }
+
+        //将逻辑改成必须添加图片，就不用考虑这部分了
+
+
+//        else {
+//            //还是加个什么吧，要不然的话，老崩溃，我也不知道为什么
+//            //稍微加点东西，让人感觉不到，不可见就OK了
+//
+//            TextView t=new TextView(mContext);
+//            t.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,2));
+//            t.setVisibility(View.INVISIBLE);
+//            viewHolder1.ll_ll.addView(t);
+//
+//
+//
+//
+//        }
+
+
+
+
+
         return view;
     }
 
@@ -128,6 +165,7 @@ public class SellAdapter extends BaseAdapter implements View.OnClickListener {
 
 
     class ViewHolder{
+        private LinearLayout ll_ll;
         private ImageView iv_logo;
         private TextView tv_name;
         private TextView tv_title;

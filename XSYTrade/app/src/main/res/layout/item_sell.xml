@@ -50,10 +50,34 @@
 
 
 
+
+    <!-- 横向滚动条 -->
+    <HorizontalScrollView
+        android:layout_below="@+id/sell_item_title"
+        android:id="@+id/horizontalScrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_below="@id/sell_item_content"
+        android:id="@+id/sell_item_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+
+
+     </HorizontalScrollView>
+
+
+
     <ImageView
         android:focusable="false"
         android:background="@mipmap/ic_message"
-        android:layout_below="@+id/sell_item_content"
+        android:layout_below="@+id/sell_item_ll"
         android:id="@+id/sell_item_message"
         android:layout_width="30dp"
         android:layout_height="30dp"

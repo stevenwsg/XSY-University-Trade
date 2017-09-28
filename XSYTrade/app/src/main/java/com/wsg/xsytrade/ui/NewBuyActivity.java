@@ -34,6 +34,7 @@ public class NewBuyActivity extends BaseActivity {
     private String mtitle;
     private  String mcontent;
 
+
     @BindView(R.id.newbuy_title)
     EditText newbuyTitle;
     @BindView(R.id.newbuy_content)

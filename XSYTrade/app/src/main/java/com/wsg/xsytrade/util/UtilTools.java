@@ -11,6 +11,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.util.Base64;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -105,6 +106,29 @@ public class UtilTools {
 
 
 
+    //保存图片到服务器
+
+    public static String putImage(final Context mContext, String path) {
+        Bitmap bitmap = BitmapFactory.decodeFile(path);
+        //第一步：将Bitmap压缩成字节数组输出流
+        ByteArrayOutputStream byStream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 80, byStream);
+        //第二步：利用Base64将我们的字节数组输出流转换成String
+        byte[] byteArray = byStream.toByteArray();
+        String imgString = new String(Base64.encodeToString(byteArray, Base64.DEFAULT));
+        //第三步：将String保存shareUtils
+
+        //保存到服务器
+
+        return imgString;
+
+
+
+    }
+
+
+
+
     //读取图片
     public static void getImage(Context mContext, ImageView imageView,String s) {
         //1.拿到string
@@ -125,15 +149,37 @@ public class UtilTools {
 
 
     //获取版本号
-    public static String getVersion(Context mContext){
+    public static String getVersion(Context mContext) {
         PackageManager pm = mContext.getPackageManager();
         try {
-            PackageInfo info = pm.getPackageInfo(mContext.getPackageName(),0);
+            PackageInfo info = pm.getPackageInfo(mContext.getPackageName(), 0);
             return info.versionName;
         } catch (PackageManager.NameNotFoundException e) {
             return mContext.getString(R.string.text_unknown);
         }
     }
+
+
+        //获取屏幕
+        public static int  getWidth(Context context){
+            WindowManager wm = (WindowManager) context
+                    .getSystemService(Context.WINDOW_SERVICE);
+            int width = wm.getDefaultDisplay().getWidth();
+            return width;
+
+    }
+
+    //获取屏幕
+    public static int  getHeight(Context context){
+        WindowManager wm = (WindowManager) context
+                .getSystemService(Context.WINDOW_SERVICE);
+        int height = wm.getDefaultDisplay().getHeight();
+
+        return height;
+
+    }
+
+
 
 
 

@@ -1,6 +1,6 @@
 package com.wsg.xsytrade.application;
 
-import android.app.Application;
+import android.support.multidex.MultiDexApplication;
 
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMOptions;
@@ -18,7 +18,7 @@ import cn.bmob.v3.Bmob;
  * 描述：替代系统的Applica，完成自己的逻辑
  */
 
-public class MyApplication extends Application {
+public class MyApplication extends MultiDexApplication {
     @Override
     public void onCreate() {
         super.onCreate();

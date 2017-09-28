@@ -20,6 +20,62 @@
         android:layout_weight="10"
         android:layout_width="match_parent"
         android:layout_height="0dp" />
+
+
+
+
+
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp">
+
+
+
+                <TextView
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/text_add_pitcure"/>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/newsell_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/newsell_pt"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@mipmap/add_pitcture"/>
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
     <Button
         android:background="@drawable/button_bg"
         android:text="提交"
@@ -27,6 +83,7 @@
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp" />
+
 
 
 
