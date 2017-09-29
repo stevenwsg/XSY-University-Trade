@@ -1,5 +1,6 @@
 package com.wsg.xsytrade;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -8,10 +9,14 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 
+import com.hyphenate.chat.EMConversation;
+import com.hyphenate.easeui.EaseConstant;
 import com.hyphenate.easeui.ui.EaseConversationListFragment;
 import com.wsg.xsytrade.fragment.BuyFragment;
+import com.wsg.xsytrade.fragment.MyMessageFragment;
 import com.wsg.xsytrade.fragment.SellFragment;
 import com.wsg.xsytrade.fragment.UserFragment;
+import com.wsg.xsytrade.ui.ChatActivity;
 import com.wsg.xsytrade.util.ShareUtils;
 import com.wsg.xsytrade.util.StaticClass;
 
@@ -24,7 +29,7 @@ import butterknife.ButterKnife;
 
 //主页面
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.mViewPager)
     ViewPager mViewPager;
@@ -34,8 +39,7 @@ public class MainActivity extends AppCompatActivity{
     private List<String> mTitle;
     //Fragment
     private List<Fragment> mFragment;
-    private EaseConversationListFragment conversationListFragment;
-
+    private MyMessageFragment conversationListFragment;
 
 
     @Override
@@ -60,6 +64,39 @@ public class MainActivity extends AppCompatActivity{
 
 
 
+        conversationListFragment = new MyMessageFragment();
+
+//
+//        // run in a second
+//        final long timeInterval = 1000;
+//        Runnable runnable = new Runnable() {
+//            public void run() {
+//                while (true) {
+//                    // ------- code for task to run
+//                    conversationListFragment.refresh();
+//                    // ------- ends here
+//                    try {
+//                        Thread.sleep(timeInterval);
+//                    } catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//            }
+//        };
+//        Thread thread = new Thread(runnable);
+//        thread.start();
+
+
+
+        conversationListFragment.setConversationListItemClickListener(new EaseConversationListFragment.EaseConversationListItemClickListener() {
+
+//            //隐藏标题栏
+//            hideTitleBar();
+            @Override
+            public void onListItemClicked(EMConversation conversation) {
+                startActivity(new Intent(MainActivity.this, ChatActivity.class).putExtra(EaseConstant.EXTRA_USER_ID, conversation.conversationId()));
+            }
+        });
 
 
 
@@ -67,7 +104,7 @@ public class MainActivity extends AppCompatActivity{
         mFragment = new ArrayList<>();
         mFragment.add(new SellFragment());
         mFragment.add(new BuyFragment());
-        mFragment.add(new EaseConversationListFragment());
+        mFragment.add(conversationListFragment);
         mFragment.add(new UserFragment());
 
     }

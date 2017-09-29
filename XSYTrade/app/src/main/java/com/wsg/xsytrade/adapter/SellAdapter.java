@@ -115,23 +115,25 @@ public class SellAdapter extends BaseAdapter implements View.OnClickListener {
         viewHolder1.iv_message.setOnClickListener(this);
         viewHolder1.iv_message.setTag(i);
 
-        if (mList.get(i).getImage()!=null){
+        if (data.getImage()!=null){
             UtilTools.getImage(mContext,viewHolder1.iv_logo,mList.get(i).getImage());
         }
 
+//        list!=null && !list.isEmpty()
 
-        if(!mList.get(i).getPhoto().isEmpty()){
-            int a=mList.get(i).getPhoto().size();
+            int a=data.getPhoto().size();
+
             ImageView[] imageViews = new ImageView[a];
+
             for (int j = 0; j <a; j++) {
                 final ImageView imageView = new ImageView(mContext);
-                imageView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-                UtilTools.getImage(mContext,imageView,mList.get(i).getPhoto().get(j));
+                imageView.setLayoutParams(new LinearLayout.LayoutParams(UtilTools.getWidth(mContext)/2, UtilTools.getHeight(mContext)/2));
+                UtilTools.getImage(mContext,imageView,data.getPhoto().get(j));
                 imageViews[j] = imageView;
                 viewHolder1.ll_ll.addView(imageViews[j]);
             }
 
-        }
+
 
         //将逻辑改成必须添加图片，就不用考虑这部分了
 

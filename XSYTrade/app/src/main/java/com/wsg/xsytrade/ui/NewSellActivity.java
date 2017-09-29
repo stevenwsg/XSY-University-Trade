@@ -19,6 +19,7 @@ import com.wsg.xsytrade.R;
 import com.wsg.xsytrade.base.BaseActivity;
 import com.wsg.xsytrade.entity.MyUser;
 import com.wsg.xsytrade.entity.Sell;
+import com.wsg.xsytrade.util.L;
 import com.wsg.xsytrade.util.UtilTools;
 
 import java.util.ArrayList;
@@ -115,6 +116,8 @@ public class NewSellActivity extends BaseActivity {
                     sell.setContent(mcontent);
                     //保存图片字节流
                     sell.setPhoto(mphoto);
+
+                    L.d(Integer.toString(mphoto.size()));
 
 
                     saveSell();

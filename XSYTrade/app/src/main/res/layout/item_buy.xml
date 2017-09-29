@@ -16,8 +16,8 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/buy_item_logo"
-            android:layout_width="40sp"
-            android:layout_height="40sp"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
             android:src="@mipmap/login_logo"/>
 
 
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="蒲公英"
-            android:textSize="12sp" />
+            android:textSize="20sp" />
     </LinearLayout>
 
 
@@ -43,7 +43,7 @@
         android:layout_below="@+id/buy_item_title"
         android:id="@+id/buy_item_content"
         android:text="刚用了一个月，准备出售"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

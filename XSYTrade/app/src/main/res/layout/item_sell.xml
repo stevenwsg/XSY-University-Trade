@@ -17,8 +17,8 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/sell_item_logo"
-     android:layout_width="40sp"
-     android:layout_height="40sp"
+     android:layout_width="50sp"
+     android:layout_height="50sp"
      android:src="@mipmap/login_logo"/>
 
 
@@ -28,14 +28,14 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="蒲公英"
-            android:textSize="12sp" />
+            android:textSize="20sp" />
     </LinearLayout>
 
 
     <TextView
         android:id="@+id/sell_item_title"
         android:text="出售二手自行车"
-        android:textSize="15sp"
+        android:textSize="20sp"
         android:layout_below="@+id/l"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -44,7 +44,7 @@
         android:layout_below="@+id/sell_item_title"
         android:id="@+id/sell_item_content"
         android:text="刚用了一个月，准备出售"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -53,7 +53,7 @@
 
     <!-- 横向滚动条 -->
     <HorizontalScrollView
-        android:layout_below="@+id/sell_item_title"
+        android:layout_below="@+id/sell_item_content"
         android:id="@+id/horizontalScrollView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -77,7 +77,7 @@
     <ImageView
         android:focusable="false"
         android:background="@mipmap/ic_message"
-        android:layout_below="@+id/sell_item_ll"
+        android:layout_below="@+id/horizontalScrollView1"
         android:id="@+id/sell_item_message"
         android:layout_width="30dp"
         android:layout_height="30dp"

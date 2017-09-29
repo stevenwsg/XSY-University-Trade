@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.hyphenate.easeui.R;
 import com.hyphenate.easeui.domain.EaseEmojicon;
 import com.hyphenate.easeui.domain.EaseEmojicon.Type;
@@ -48,7 +49,17 @@ public class EmojiconGridAdapter extends ArrayAdapter<EaseEmojicon>{
             if(emojicon.getIcon() != 0){
                 imageView.setImageResource(emojicon.getIcon());
             }else if(emojicon.getIconPath() != null){
-                Glide.with(getContext()).load(emojicon.getIconPath()).placeholder(R.drawable.ease_default_expression).into(imageView);
+
+
+
+
+                RequestOptions options = new RequestOptions();
+                options.placeholder(R.drawable.ease_default_expression);
+                Glide.with(getContext()).load(emojicon.getIconPath()).apply(options).into(imageView);
+
+
+
+//                Glide.with(getContext()).load(emojicon.getIconPath()).placeholder(R.drawable.ease_default_expression).into(imageView);
             }
         }
         
