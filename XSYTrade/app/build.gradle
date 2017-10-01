@@ -1,6 +1,9 @@
 apply plugin: 'com.android.application'
 
 android {
+    lintOptions {
+        disable "ResourceType"
+    }
 
     packagingOptions {
         exclude 'META-INF/rxjava.properties'
@@ -58,15 +61,9 @@ dependencies {
         exclude group: 'io.reactivex:rxjava'
         exclude group: 'com.squareup.okio'
     }
-    compile project(':easeui')
-
-
     //图片选择器
     compile 'com.github.LuckSiege.PictureSelector:picture_library:v2.1.1'
-
     compile 'com.android.support:multidex:'
-
-
-
-
+    compile project(':easeui')
+    compile files('libs/mta-sdk-1.6.2.jar')
 }

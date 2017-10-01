@@ -51,7 +51,7 @@ public class EaseChatRowBigExpression extends EaseChatRowText{
 
                 RequestOptions options = new RequestOptions();
                 options.placeholder(R.drawable.ease_default_expression);
-                Glide.with(activity).load(emojicon.getBigIcon()).apply(options).into(imageView);
+                Glide.with(context).load(emojicon.getBigIcon()).apply(options).into(imageView);
 
 
 //                Glide.with(activity).load(emojicon.getBigIcon()).placeholder(R.drawable.ease_default_expression).into(imageView);
@@ -59,7 +59,8 @@ public class EaseChatRowBigExpression extends EaseChatRowText{
 
                 RequestOptions options = new RequestOptions();
                 options.placeholder(R.drawable.ease_default_expression);
-                Glide.with(activity).load(emojicon.getBigIconPath()).apply(options).into(imageView);
+                Glide.with(context).load(emojicon.getBigIconPath()).apply(options).into(imageView);
+
 
 //                Glide.with(activity).load(emojicon.getBigIconPath()).placeholder(R.drawable.ease_default_expression).into(imageView);
             }else{

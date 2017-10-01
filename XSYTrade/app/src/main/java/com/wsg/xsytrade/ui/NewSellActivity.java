@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.luck.picture.lib.PictureSelector;
+import com.luck.picture.lib.compress.Luban;
 import com.luck.picture.lib.config.PictureConfig;
 import com.luck.picture.lib.config.PictureMimeType;
 import com.luck.picture.lib.entity.LocalMedia;
@@ -31,6 +32,8 @@ import butterknife.OnClick;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
+
+import static com.luck.picture.lib.config.PictureConfig.LUBAN_COMPRESS_MODE;
 
 /**
  * 项目名：XSYTrade
@@ -134,6 +137,10 @@ public class NewSellActivity extends BaseActivity {
     private void toPictures() {
         PictureSelector.create(NewSellActivity.this)
                 .openGallery(PictureMimeType.ofImage())
+                .compressGrade(Luban.CUSTOM_GEAR)// luban压缩档次，默认3档 Luban.THIRD_GEAR、Luban.FIRST_GEAR、Luban.CUSTOM_GEAR
+                .compress(true)// 是否压缩 true or false
+                .compressMode(LUBAN_COMPRESS_MODE)//系统自带 or 鲁班压缩 PictureConfig.SYSTEM_COMPRESS_MODE or LUBAN_COMPRESS_MODE
+                .compressMaxKB(50)//压缩最大值kb compressGrade()为Luban.CUSTOM_GEAR有效 int
                 .forResult(PictureConfig.CHOOSE_REQUEST);
     }
 
@@ -191,6 +198,9 @@ public class NewSellActivity extends BaseActivity {
 
 
                     ImageView[] imageViews = new ImageView[selectList.size()];
+
+                    L.d(Integer.toString(selectList.size()));
+
                     for (int i = 0; i < imageViews.length; i++) {
                         ImageView imageView = new ImageView(this);
                         imageView.setLayoutParams(new LinearLayout.LayoutParams(100, 100));

@@ -42,13 +42,13 @@ public class EaseUserUtils {
                 int avatarResId = Integer.parseInt(user.getAvatar());
                 Glide.with(context).load(avatarResId).into(imageView);
             } catch (Exception e) {
-
+                //use default avatar
 
                 RequestOptions options = new RequestOptions();
-                options.placeholder(R.drawable.ease_default_expression);
+                options.placeholder(R.drawable.ease_default_avatar);
                 Glide.with(context).load(user.getAvatar()).apply(options).into(imageView);
 
-                //use default avatar
+
 //                Glide.with(context).load(user.getAvatar()).diskCacheStrategy(DiskCacheStrategy.ALL).placeholder(R.drawable.ease_default_avatar).into(imageView);
             }
         }else{

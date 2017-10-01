@@ -50,13 +50,9 @@ public class EmojiconGridAdapter extends ArrayAdapter<EaseEmojicon>{
                 imageView.setImageResource(emojicon.getIcon());
             }else if(emojicon.getIconPath() != null){
 
-
-
-
                 RequestOptions options = new RequestOptions();
                 options.placeholder(R.drawable.ease_default_expression);
                 Glide.with(getContext()).load(emojicon.getIconPath()).apply(options).into(imageView);
-
 
 
 //                Glide.with(getContext()).load(emojicon.getIconPath()).placeholder(R.drawable.ease_default_expression).into(imageView);
