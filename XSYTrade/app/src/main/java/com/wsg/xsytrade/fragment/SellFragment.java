@@ -137,6 +137,7 @@ public class SellFragment extends Fragment implements SellAdapter.Callback{
             @Override
             public void done(List<Sell> list, BmobException e) {
                 if (e == null) {
+
                     //2、已经获取到集合
                     mList.clear();
                     mList.addAll(list);

@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import com.wsg.xsytrade.R;
 import com.wsg.xsytrade.entity.Sell;
-import com.wsg.xsytrade.util.L;
 import com.wsg.xsytrade.util.UtilTools;
 
 import java.util.List;
@@ -122,19 +121,21 @@ public class SellAdapter extends BaseAdapter implements View.OnClickListener {
 
 //        list!=null && !list.isEmpty()
 
-            int a=data.getPhoto().size();
-
-            L.d(Integer.toString(a));
-
-            ImageView[] imageViews = new ImageView[a];
-
-            for (int j = 0; j <a; j++) {
-                final ImageView imageView = new ImageView(mContext);
-                imageView.setLayoutParams(new LinearLayout.LayoutParams(UtilTools.getWidth(mContext)/3, UtilTools.getHeight(mContext)/3));
-                UtilTools.getImage(mContext,imageView,data.getPhoto().get(j));
-                imageViews[j] = imageView;
-                viewHolder1.ll_ll.addView(imageViews[j]);
-            }
+//            int a=data.getPhoto().size();
+//
+//            L.d(Integer.toString(a));
+//
+//            ImageView[] imageViews = new ImageView[a];
+//
+//            for (int j = 0; j <a; j++) {
+//                final ImageView imageView = new ImageView(mContext);
+//                imageView.setLayoutParams(new LinearLayout.LayoutParams(UtilTools.getWidth(mContext)/3, UtilTools.getHeight(mContext)/3));
+//                UtilTools.getImage(mContext,imageView,data.getPhoto().get(j));
+//                imageViews[j] = imageView;
+//                viewHolder1.ll_ll.addView(imageViews[j]);
+//
+//
+//            }
 
 
 

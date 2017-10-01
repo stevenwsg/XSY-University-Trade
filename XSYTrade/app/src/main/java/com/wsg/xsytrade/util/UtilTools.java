@@ -87,6 +87,8 @@ public class UtilTools {
 
 
 
+
+
     }
 
     //读取图片
@@ -100,6 +102,10 @@ public class UtilTools {
             //3.生成bitmap
             Bitmap bitmap = BitmapFactory.decodeStream(byStream);
             imageView.setImageBitmap(bitmap);
+
+
+
+
         }
     }
 
@@ -140,6 +146,9 @@ public class UtilTools {
             //3.生成bitmap
             Bitmap bitmap = BitmapFactory.decodeStream(byStream);
             imageView.setImageBitmap(bitmap);
+
+
+
         }
     }
 

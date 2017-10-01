@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">石大交易</string>
     <string name="text_login">登录</string>
-    <string name="text_keep_password">记住密码</string>
     <string name="text_forget_password">忘记密码</string>
     <string name="app_three_login">第三方登录</string>
     <string name="text_registered">注册</string>
@@ -33,10 +32,8 @@
     <string name="text_message">我的消息</string>
     <string name="text_buy">闲置求售</string>
     <string name="text_sell">闲置求购</string>
-    <string name="text_love">没有什么能够阻挡，你对自由的向往</string>
     <string name="text_app_name">应用名称：</string>
     <string name="text_version">版本：</string>
-    <string name="text_me">作者：蓝莲花</string>
     <string name="text_unknown">未知</string>
     <string name="text_call">QQ:1516961816</string>
     <string name="text_github">Github：https://github.com/stevenwsg</string>
@@ -56,5 +53,4 @@
     <string name="text_my_buy">我的求售</string>
     <string name="text_modifymysell">修改我的求购</string>
     <string name="text_modifymybuy">修改我的求购</string>
-    <string name="text_add_pitcure">添加图片:</string>
 </resources>

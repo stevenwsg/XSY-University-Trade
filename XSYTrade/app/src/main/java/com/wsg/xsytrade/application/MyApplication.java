@@ -2,6 +2,7 @@ package com.wsg.xsytrade.application;
 
 import android.support.multidex.MultiDexApplication;
 
+import com.baidu.mapapi.SDKInitializer;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMOptions;
 import com.hyphenate.easeui.EaseUI;
@@ -39,5 +40,12 @@ public class MyApplication extends MultiDexApplication {
 //        EMClient.getInstance().init(getApplicationContext(), options);
 //在做打包混淆时，关闭debug模式，避免消耗不必要的资源
         EMClient.getInstance().setDebugMode(true);
+
+
+
+//        SpeechUtility.createUtility(getApplicationContext(), SpeechConstant.APPID + "=" + StaticClass.VOICE_KEY);
+//        //在使用SDK各组件之前初始化context信息，传入ApplicationContext
+//        //注意该方法要再setContentView方法之前实现
+        SDKInitializer.initialize(getApplicationContext());
     }
 }
