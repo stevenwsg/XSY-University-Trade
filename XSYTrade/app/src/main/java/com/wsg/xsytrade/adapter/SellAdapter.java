@@ -9,8 +9,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.wsg.xsytrade.R;
 import com.wsg.xsytrade.entity.Sell;
+import com.wsg.xsytrade.util.L;
 import com.wsg.xsytrade.util.UtilTools;
 
 import java.util.List;
@@ -119,42 +121,30 @@ public class SellAdapter extends BaseAdapter implements View.OnClickListener {
             UtilTools.getImage(mContext,viewHolder1.iv_logo,mList.get(i).getImage());
         }
 
-//        list!=null && !list.isEmpty()
-
-//            int a=data.getPhoto().size();
-//
-//            L.d(Integer.toString(a));
-//
-//            ImageView[] imageViews = new ImageView[a];
-//
-//            for (int j = 0; j <a; j++) {
-//                final ImageView imageView = new ImageView(mContext);
-//                imageView.setLayoutParams(new LinearLayout.LayoutParams(UtilTools.getWidth(mContext)/3, UtilTools.getHeight(mContext)/3));
-//                UtilTools.getImage(mContext,imageView,data.getPhoto().get(j));
-//                imageViews[j] = imageView;
-//                viewHolder1.ll_ll.addView(imageViews[j]);
-//
-//
-//            }
 
 
+        if(data.getPhoto().size()!=0) {
 
-        //将逻辑改成必须添加图片，就不用考虑这部分了
+
+            int a = data.getPhoto().size();
+
+            L.d(Integer.toString(a));
+
+            ImageView[] imageViews = new ImageView[a];
+
+            for (int j = 0; j < a; j++) {
+                final ImageView imageView = new ImageView(mContext);
+                imageView.setLayoutParams(new LinearLayout.LayoutParams(UtilTools.getWidth(mContext) / 3, UtilTools.getHeight(mContext) / 3));
+                Glide.with(mContext).load(data.getPhoto().get(j)).into(imageView);
+                imageViews[j] = imageView;
+                viewHolder1.ll_ll.addView(imageViews[j]);
 
 
-//        else {
-//            //还是加个什么吧，要不然的话，老崩溃，我也不知道为什么
-//            //稍微加点东西，让人感觉不到，不可见就OK了
-//
-//            TextView t=new TextView(mContext);
-//            t.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,2));
-//            t.setVisibility(View.INVISIBLE);
-//            viewHolder1.ll_ll.addView(t);
-//
-//
-//
-//
-//        }
+            }
+        }
+
+
+
 
 
 

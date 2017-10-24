@@ -11,6 +11,7 @@ android {
     compileSdkVersion 26
     buildToolsVersion "26.0.0"
     defaultConfig {
+        useJack=true
         applicationId "com.wsg.xsytrade"
         minSdkVersion 14
         targetSdkVersion 26

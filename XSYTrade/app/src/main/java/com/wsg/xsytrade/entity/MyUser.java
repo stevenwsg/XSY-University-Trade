@@ -17,6 +17,7 @@ public class MyUser extends BmobUser {
     private String desc;
     private String image;
 
+
     public String getImage() {
         return image;
     }

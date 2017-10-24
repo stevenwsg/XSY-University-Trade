@@ -1,5 +1,8 @@
 package com.wsg.xsytrade.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import cn.bmob.v3.BmobObject;
 
 /**
@@ -16,6 +19,16 @@ public class Sell extends BmobObject {
     private String title;
     private String content;
     private String image;
+
+    public List<String> getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(List<String> photo) {
+        this.photo = photo;
+    }
+
+    private List<String> photo=new ArrayList<>();
 
 
 

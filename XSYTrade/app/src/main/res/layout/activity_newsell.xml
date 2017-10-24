@@ -17,13 +17,24 @@
         android:hint="亲，请输入内容"
         android:background="@drawable/edittext_bg"
         android:id="@+id/newsell_content"
-        android:layout_weight="10"
+        android:layout_weight="7"
         android:layout_width="match_parent"
         android:layout_height="0dp" />
 
 
+    <LinearLayout
+        android:id="@+id/newsell_ll"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
 
+        <ImageView
+            android:id="@+id/iv_addphoto"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/ic_addphoto"/>
 
+    </LinearLayout>
 
 
 
@@ -40,9 +51,8 @@
         android:background="@drawable/button_bg"
         android:text="提交"
         android:id="@+id/newsell_bt"
-        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="0dp" />
+        android:layout_height="50dp" />
 
 
 

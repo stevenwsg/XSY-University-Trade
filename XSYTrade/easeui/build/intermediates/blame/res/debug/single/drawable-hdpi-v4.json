@@ -4,12 +4,12 @@
         "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\src\\main\\res\\drawable-hdpi\\ee_34.png"
     },
     {
-        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png",
-        "source": "C:\\Users\\wsg\\.android\\build-cache\\2f155ce9c169d3a59f1e886bee174e7f662dae5b\\output\\res\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
-    },
-    {
         "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_settings_selected.png",
         "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\src\\main\\res\\drawable-hdpi\\ease_settings_selected.png"
+    },
+    {
+        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png",
+        "source": "C:\\Users\\wsg\\.android\\build-cache\\2f155ce9c169d3a59f1e886bee174e7f662dae5b\\output\\res\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
         "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_chatfrom_voice_playing_f2.png",
@@ -28,20 +28,20 @@
         "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\src\\main\\res\\drawable-hdpi\\ease_appitem_del_btn_normal.png"
     },
     {
-        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ee_3.png",
-        "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\src\\main\\res\\drawable-hdpi\\ee_3.png"
-    },
-    {
         "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_dx_checkbox_gray_on.png",
         "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\src\\main\\res\\drawable-hdpi\\ease_dx_checkbox_gray_on.png"
     },
     {
-        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ee_18.png",
-        "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\src\\main\\res\\drawable-hdpi\\ee_18.png"
+        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ee_3.png",
+        "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\src\\main\\res\\drawable-hdpi\\ee_3.png"
     },
     {
         "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_chatting_setmode_keyboard_btn_pressed.png",
         "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\src\\main\\res\\drawable-hdpi\\ease_chatting_setmode_keyboard_btn_pressed.png"
+    },
+    {
+        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ee_18.png",
+        "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\src\\main\\res\\drawable-hdpi\\ee_18.png"
     },
     {
         "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_mm_title_back.png",
