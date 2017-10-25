@@ -128,12 +128,12 @@
         "source": "C:\\Users\\wsg\\.android\\build-cache\\2f155ce9c169d3a59f1e886bee174e7f662dae5b\\output\\res\\drawable-mdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
     },
     {
-        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\abc_list_focused_holo.9.png",
-        "source": "C:\\Users\\wsg\\.android\\build-cache\\2f155ce9c169d3a59f1e886bee174e7f662dae5b\\output\\res\\drawable-mdpi-v4\\abc_list_focused_holo.9.png"
-    },
-    {
         "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png",
         "source": "C:\\Users\\wsg\\.android\\build-cache\\2f155ce9c169d3a59f1e886bee174e7f662dae5b\\output\\res\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
+    },
+    {
+        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\abc_list_focused_holo.9.png",
+        "source": "C:\\Users\\wsg\\.android\\build-cache\\2f155ce9c169d3a59f1e886bee174e7f662dae5b\\output\\res\\drawable-mdpi-v4\\abc_list_focused_holo.9.png"
     },
     {
         "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png",

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,7 @@ import com.wsg.xsytrade.adapter.BuyAdapter;
 import com.wsg.xsytrade.entity.Buy;
 import com.wsg.xsytrade.ui.ChatActivity;
 import com.wsg.xsytrade.ui.NewBuyActivity;
+import com.wsg.xsytrade.ui.SearchBuyActivity;
 import com.wsg.xsytrade.util.L;
 
 import java.util.ArrayList;
@@ -49,6 +51,7 @@ public class BuyFragment extends Fragment implements BuyAdapter.Callback {
 
     private List<Buy> mList = new ArrayList<>();
     private BuyAdapter adapter;
+    private String s;
 
     @BindView(R.id.buy_ed)
     EditText buyEd;
@@ -100,7 +103,20 @@ public class BuyFragment extends Fragment implements BuyAdapter.Callback {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.buy_search:
-                //// TODO: 2017/9/22
+                ////
+                s=buyEd.getText().toString().trim();
+
+
+
+                if (!TextUtils.isEmpty(s)){
+                    Intent intent=new Intent(getActivity(), SearchBuyActivity.class);
+                    intent.putExtra("buy",s);
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getActivity(),"亲，输入框不能为空~~~~",Toast.LENGTH_SHORT).show();
+                }
+
                 break;
             case R.id.buy_write:
                 //添加的逻辑
@@ -148,7 +164,7 @@ public class BuyFragment extends Fragment implements BuyAdapter.Callback {
         int i=(Integer) v.getTag();
 
 
-        String name =mList.get(i).getName();
+        String name =mList.get(i).getMessageid();
 
 
 

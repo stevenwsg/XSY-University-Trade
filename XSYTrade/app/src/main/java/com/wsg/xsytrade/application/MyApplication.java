@@ -24,7 +24,7 @@ public class MyApplication extends MultiDexApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-        CrashReport.initCrashReport(getApplicationContext(), StaticClass.BUGLY_APP_ID, true);
+        CrashReport.initCrashReport(getApplicationContext(), StaticClass.BUGLY_APP_ID, false);
         //第一：默认初始化
         Bmob.initialize(this, StaticClass.BMOB_APP_ID);
         //自动更新，只能使用一次

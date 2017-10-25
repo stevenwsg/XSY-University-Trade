@@ -36,12 +36,12 @@
         "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\src\\main\\res\\drawable-hdpi\\ease_chat_face_pressed.png"
     },
     {
-        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\ease_mm_listitem_grey_normal.9.png",
-        "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\src\\main\\res\\drawable-hdpi\\ease_mm_listitem_grey_normal.9.png"
-    },
-    {
         "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\ease_chatfrom_voice_playing_f1.png",
         "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\src\\main\\res\\drawable-hdpi\\ease_chatfrom_voice_playing_f1.png"
+    },
+    {
+        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\ease_mm_listitem_grey_normal.9.png",
+        "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\src\\main\\res\\drawable-hdpi\\ease_mm_listitem_grey_normal.9.png"
     },
     {
         "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\ease_search_bar_icon_normal.png",

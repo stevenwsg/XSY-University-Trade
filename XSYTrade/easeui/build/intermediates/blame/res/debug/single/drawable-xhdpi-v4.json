@@ -12,12 +12,12 @@
         "source": "C:\\Users\\wsg\\.android\\build-cache\\2f155ce9c169d3a59f1e886bee174e7f662dae5b\\output\\res\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
-        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ease_chat_location_normal.png",
-        "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\src\\main\\res\\drawable-xhdpi\\ease_chat_location_normal.png"
-    },
-    {
         "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png",
         "source": "C:\\Users\\wsg\\.android\\build-cache\\2f155ce9c169d3a59f1e886bee174e7f662dae5b\\output\\res\\drawable-xhdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
+    },
+    {
+        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ease_chat_location_normal.png",
+        "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\src\\main\\res\\drawable-xhdpi\\ease_chat_location_normal.png"
     },
     {
         "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_000.png",

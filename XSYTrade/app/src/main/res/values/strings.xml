@@ -53,4 +53,6 @@
     <string name="text_my_buy">我的求售</string>
     <string name="text_modifymysell">修改我的求购</string>
     <string name="text_modifymybuy">修改我的求购</string>
+    <string name="searchsell">搜索待售</string>
+    <string name="searchbuy">搜索求购</string>
 </resources>

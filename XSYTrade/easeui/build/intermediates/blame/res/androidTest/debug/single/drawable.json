@@ -32,12 +32,12 @@
         "source": "C:\\Users\\wsg\\.android\\build-cache\\2f155ce9c169d3a59f1e886bee174e7f662dae5b\\output\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
     },
     {
-        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_item_background_holo_light.xml",
-        "source": "C:\\Users\\wsg\\.android\\build-cache\\2f155ce9c169d3a59f1e886bee174e7f662dae5b\\output\\res\\drawable\\abc_item_background_holo_light.xml"
-    },
-    {
         "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_chatto_bg.xml",
         "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_chatto_bg.xml"
+    },
+    {
+        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\Users\\wsg\\.android\\build-cache\\2f155ce9c169d3a59f1e886bee174e7f662dae5b\\output\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
         "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ratingbar_indicator_material.xml",

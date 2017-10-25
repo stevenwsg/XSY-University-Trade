@@ -57,6 +57,7 @@ public class NewSellActivity extends BaseActivity {
     private String image;
     private String mtitle;
     private String mcontent;
+    private String messageid;
     private List<LocalMedia> selectList;
     private List<String> mphoto = new ArrayList<String>();
 
@@ -109,6 +110,7 @@ public class NewSellActivity extends BaseActivity {
                 MyUser userInfo = BmobUser.getCurrentUser(MyUser.class);
                 mname = userInfo.getUsername();
                 image = userInfo.getImage();
+                messageid=userInfo.getObjectId();
                 mtitle = newsellTitle.getText().toString().trim();
                 mcontent = newsellContent.getText().toString().trim();
 
@@ -119,6 +121,7 @@ public class NewSellActivity extends BaseActivity {
                     sell.setImage(image);
                     sell.setTitle(mtitle);
                     sell.setContent(mcontent);
+                    sell.setMessageid(messageid);
                     final String[] filePaths = new String[selectList.size()];
                     for (int i = 0; i <selectList.size() ; i++) {
                         filePaths[i] =selectList.get(i).getPath() ;
@@ -201,7 +204,7 @@ public class NewSellActivity extends BaseActivity {
 
                     for (int i = 0; i < imageViews.length; i++) {
                         ImageView imageView = new ImageView(this);
-                        imageView.setLayoutParams(new LinearLayout.LayoutParams(DemiUitls.px2dip(this,100), DemiUitls.px2dip(this,100)));
+                        imageView.setLayoutParams(new LinearLayout.LayoutParams(DemiUitls.dip2px(this,100), DemiUitls.dip2px(this,100)));
                         Glide.with(this).load(selectList.get(i).getPath()).into(imageView);
                         //转换成字符流并添加到，集合
 

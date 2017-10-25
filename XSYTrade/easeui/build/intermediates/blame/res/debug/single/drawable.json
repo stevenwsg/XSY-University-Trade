@@ -28,20 +28,20 @@
         "source": "C:\\Users\\wsg\\.android\\build-cache\\2f155ce9c169d3a59f1e886bee174e7f662dae5b\\output\\res\\drawable\\abc_dialog_material_background.xml"
     },
     {
-        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable\\recall_message_bg.xml",
-        "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\src\\main\\res\\drawable\\recall_message_bg.xml"
-    },
-    {
         "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable\\ease_chatfrom_bg.xml",
         "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\src\\main\\res\\drawable\\ease_chatfrom_bg.xml"
     },
     {
-        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
-        "source": "C:\\Users\\wsg\\.android\\build-cache\\2f155ce9c169d3a59f1e886bee174e7f662dae5b\\output\\res\\drawable\\abc_btn_check_material.xml"
+        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable\\recall_message_bg.xml",
+        "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\src\\main\\res\\drawable\\recall_message_bg.xml"
     },
     {
         "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
         "source": "C:\\Users\\wsg\\.android\\build-cache\\2f155ce9c169d3a59f1e886bee174e7f662dae5b\\output\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\Users\\wsg\\.android\\build-cache\\2f155ce9c169d3a59f1e886bee174e7f662dae5b\\output\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
         "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable\\ease_mm_listitem.xml",

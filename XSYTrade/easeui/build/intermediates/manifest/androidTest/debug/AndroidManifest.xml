@@ -3,8 +3,8 @@
     package="com.hyphenate.easeui.test" >
 
     <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="22" />
+        android:minSdkVersion="16"
+        android:targetSdkVersion="26" />
 
     <instrumentation
         android:name="android.support.test.runner.AndroidJUnitRunner"

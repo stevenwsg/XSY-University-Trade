@@ -382,44 +382,55 @@ qq登录开始
                         public void done(MyUser myUser, BmobException e) {
                             if(e==null){
                                 L.i("Bmob登陆成功");
-
-
-
+                                //很耗时，开启一个线程
                                 //注册环信
-
-                                MyUser userInfo = BmobUser.getCurrentUser(MyUser.class);
-                                String n=userInfo.getObjectId();
-
-                                //注册环信用户
-
-                                try {
-                                    EMClient.getInstance().createAccount(n,"123456");//同步方法
-                                } catch (HyphenateException e1) {
-                                    e1.printStackTrace();
-                                    L.i(Integer.toString(e1.getErrorCode())+e1.getDescription());
-                                }
-
-
-                                //登录环信
-
-                                EMClient.getInstance().login(n,"123456",new EMCallBack() {//回调
+                                new Thread(new Runnable() {
                                     @Override
-                                    public void onSuccess() {
-                                        EMClient.getInstance().groupManager().loadAllGroups();
-                                        EMClient.getInstance().chatManager().loadAllConversations();
-                                        L.i("登录聊天服务器成功！");
-                                    }
+                                    public void run() {
+                                        MyUser userInfo = BmobUser.getCurrentUser(MyUser.class);
+                                        String n=userInfo.getObjectId();
 
-                                    @Override
-                                    public void onProgress(int progress, String status) {
+                                        //注册环信用户
+
+                                        try {
+                                            EMClient.getInstance().createAccount(n,"123456");//同步方法
+                                        } catch (HyphenateException e1) {
+                                            e1.printStackTrace();
+                                            L.i("环信注册失败");
+                                            L.i(Integer.toString(e1.getErrorCode())+e1.getDescription());
+                                        }
+
+
+                                        //登录环信
+
+                                        EMClient.getInstance().login(n,"123456",new EMCallBack() {//回调
+                                            @Override
+                                            public void onSuccess() {
+                                                EMClient.getInstance().groupManager().loadAllGroups();
+                                                EMClient.getInstance().chatManager().loadAllConversations();
+                                                L.i("登录聊天服务器成功！");
+                                            }
+
+                                            @Override
+                                            public void onProgress(int progress, String status) {
+
+                                            }
+
+                                            @Override
+                                            public void onError(int code, String message) {
+                                                L.i("登录聊天服务器失败！"+message);
+                                            }
+                                        });
 
                                     }
+                                }).start();
 
-                                    @Override
-                                    public void onError(int code, String message) {
-                                        L.i("登录聊天服务器失败！"+message);
-                                    }
-                                });
+
+
+
+
+
+
 
 
                                 dialog.dismiss();

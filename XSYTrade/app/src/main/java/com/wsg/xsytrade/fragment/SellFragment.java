@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import com.wsg.xsytrade.adapter.SellAdapter;
 import com.wsg.xsytrade.entity.Sell;
 import com.wsg.xsytrade.ui.ChatActivity;
 import com.wsg.xsytrade.ui.NewSellActivity;
+import com.wsg.xsytrade.ui.SearchSellActivity;
 import com.wsg.xsytrade.util.L;
 
 import java.util.ArrayList;
@@ -106,8 +108,18 @@ public class SellFragment extends Fragment implements SellAdapter.Callback{
         switch (view.getId()) {
             case R.id.sell_search:
                 msearch = sellEd.getText().toString().trim();
-                //搜索的逻辑
-                //// TODO: 2017/9/22  
+
+                if (!TextUtils.isEmpty(msearch)){
+                    Intent intent=new Intent(getActivity(), SearchSellActivity.class);
+                    intent.putExtra("sell",msearch);
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getActivity(),"亲，输入框不能为空~~~~",Toast.LENGTH_SHORT).show();
+                }
+
+
+
                 break;
             case R.id.sell_write:
                 //添加的逻辑
@@ -156,7 +168,7 @@ public class SellFragment extends Fragment implements SellAdapter.Callback{
 
         int i=(Integer) v.getTag();
 
-        String name =mList.get(i).getName();
+        String name =mList.get(i).getMessageid();
 
 
         L.d(EaseConstant.EXTRA_USER_ID);
@@ -173,9 +185,6 @@ public class SellFragment extends Fragment implements SellAdapter.Callback{
 
 
 
-//                Toast.makeText(getActivity(),
-//                                "listview的内部的按钮被点击了！，位置是-->" + (Integer) v.getTag() + ",内容是-->",
-//                        Toast.LENGTH_SHORT).show();
     }
 
 }

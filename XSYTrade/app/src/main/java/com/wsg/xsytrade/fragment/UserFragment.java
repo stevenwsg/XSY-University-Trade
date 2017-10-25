@@ -24,7 +24,6 @@ import com.wsg.xsytrade.ui.BackActivity;
 import com.wsg.xsytrade.ui.DonateActivity;
 import com.wsg.xsytrade.ui.MyBuyActivity;
 import com.wsg.xsytrade.ui.MySellActivity;
-import com.wsg.xsytrade.ui.ShareActivity;
 import com.wsg.xsytrade.ui.UpdateActivity;
 import com.wsg.xsytrade.util.L;
 import com.wsg.xsytrade.util.ShareUtils;
@@ -86,8 +85,7 @@ public class UserFragment extends Fragment implements View.OnClickListener {
     @BindView(R.id.tv_update)
     TextView tvUpdate;
     Unbinder unbinder;
-    @BindView(R.id.tv_share)
-    TextView tvShare;
+
 
 
     private CustomDialog dialog;
@@ -151,7 +149,7 @@ public class UserFragment extends Fragment implements View.OnClickListener {
         unbinder.unbind();
     }
 
-    @OnClick({profile_image, R.id.edit_user, btn_update_ok, R.id.tv_sell, R.id.tv_buy, R.id.tv_donate, R.id.tv_back, R.id.tv_about, R.id.tv_update,R.id.tv_share})
+    @OnClick({profile_image, R.id.edit_user, btn_update_ok, R.id.tv_sell, R.id.tv_buy, R.id.tv_donate, R.id.tv_back, R.id.tv_about, R.id.tv_update})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case profile_image:
@@ -181,9 +179,6 @@ public class UserFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.tv_update:
                 startActivity(new Intent(getActivity(), UpdateActivity.class));
-                break;
-            case R.id.tv_share:
-                startActivity(new Intent(getActivity(), ShareActivity.class));
                 break;
         }
     }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.wsg.xsytrade" >
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.wsg.xsytrade">
 
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -50,14 +51,16 @@
         android:icon="@mipmap/login_logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon, android:theme">
         <activity android:name=".ui.SplashActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity"
+            android:launchMode="singleTask"></activity>
         <activity android:name=".ui.LoginActivity"
             android:label="@string/text_login"></activity>
         <activity android:name=".ui.RegisteredActivity"
@@ -70,8 +73,6 @@
             android:label="@string/text_back"></activity>
         <activity android:name=".ui.DonateActivity"
             android:label="@string/text_donate"></activity>
-        <activity android:name=".ui.ShareActivity"
-            android:label="@string/text_share"></activity>
         <activity android:name=".ui.UpdateActivity"
             android:label="@string/text_update"></activity>
 
@@ -90,6 +91,12 @@
             android:label="@string/text_modifymysell"></activity>
         <activity android:name=".ui.ModifyMyBuyActivity"
             android:label="@string/text_modifymybuy"></activity>
+
+        <activity android:name=".ui.SearchSellActivity"
+            android:label="@string/searchsell"></activity>
+
+        <activity android:name=".ui.SearchBuyActivity"
+            android:label="@string/searchbuy"></activity>
 
 
 
@@ -156,6 +163,8 @@
 
 
 
+
+
         <!--图片选择器-->
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -200,6 +209,8 @@
             android:name="com.tencent.connect.common.AssistActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+
 
 
     </application>

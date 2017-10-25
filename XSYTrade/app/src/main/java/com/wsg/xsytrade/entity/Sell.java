@@ -20,6 +20,16 @@ public class Sell extends BmobObject {
     private String content;
     private String image;
 
+    public String getMessageid() {
+        return messageid;
+    }
+
+    public void setMessageid(String messageid) {
+        this.messageid = messageid;
+    }
+
+    private String messageid;
+
     public List<String> getPhoto() {
         return photo;
     }

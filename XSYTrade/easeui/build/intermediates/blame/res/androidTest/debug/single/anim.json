@@ -4,24 +4,24 @@
         "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\bundles\\debug\\res\\anim\\push_bottom_out.xml"
     },
     {
-        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\push_top_out.xml",
-        "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\bundles\\debug\\res\\anim\\push_top_out.xml"
-    },
-    {
         "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_in_top.xml",
         "source": "C:\\Users\\wsg\\.android\\build-cache\\2f155ce9c169d3a59f1e886bee174e7f662dae5b\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\push_top_out.xml",
+        "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\bundles\\debug\\res\\anim\\push_top_out.xml"
     },
     {
         "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
         "source": "C:\\Users\\wsg\\.android\\build-cache\\2f155ce9c169d3a59f1e886bee174e7f662dae5b\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
     },
     {
-        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\voice_to_icon.xml",
-        "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\bundles\\debug\\res\\anim\\voice_to_icon.xml"
-    },
-    {
         "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_fade_out.xml",
         "source": "C:\\Users\\wsg\\.android\\build-cache\\2f155ce9c169d3a59f1e886bee174e7f662dae5b\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\voice_to_icon.xml",
+        "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\bundles\\debug\\res\\anim\\voice_to_icon.xml"
     },
     {
         "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",

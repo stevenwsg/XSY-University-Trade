@@ -109,6 +109,8 @@ public class SellAdapter extends BaseAdapter implements View.OnClickListener {
 
         //设置数据
         data=mList.get(i);
+
+
         viewHolder1.tv_name.setText(data.getName());
         viewHolder1.tv_title.setText(data.getTitle());
         viewHolder1.tv_content.setText(data.getContent());
@@ -130,17 +132,18 @@ public class SellAdapter extends BaseAdapter implements View.OnClickListener {
 
             L.d(Integer.toString(a));
 
-            ImageView[] imageViews = new ImageView[a];
-
+            viewHolder1.ll_ll.removeAllViews();
             for (int j = 0; j < a; j++) {
+                /*
+                动态添加会导致一个问题，重复添加，导致内存泄漏
+                所以为了防止重复添加，现将所有的imageview移除，清空资源，再添加
+                 */
                 final ImageView imageView = new ImageView(mContext);
                 imageView.setLayoutParams(new LinearLayout.LayoutParams(UtilTools.getWidth(mContext) / 3, UtilTools.getHeight(mContext) / 3));
                 Glide.with(mContext).load(data.getPhoto().get(j)).into(imageView);
-                imageViews[j] = imageView;
-                viewHolder1.ll_ll.addView(imageViews[j]);
-
-
+                viewHolder1.ll_ll.addView(imageView);
             }
+
         }
 
 

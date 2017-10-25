@@ -1,11 +1,11 @@
 [
     {
-        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\anim\\slide_out_to_left.xml",
-        "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\src\\main\\res\\anim\\slide_out_to_left.xml"
-    },
-    {
         "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\anim\\hold.xml",
         "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\src\\main\\res\\anim\\hold.xml"
+    },
+    {
+        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\anim\\slide_out_to_left.xml",
+        "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\src\\main\\res\\anim\\slide_out_to_left.xml"
     },
     {
         "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\anim\\voice_from_icon.xml",
@@ -16,12 +16,12 @@
         "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\src\\main\\res\\anim\\fade_out.xml"
     },
     {
-        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\anim\\push_top_out2.xml",
-        "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\src\\main\\res\\anim\\push_top_out2.xml"
-    },
-    {
         "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
         "source": "C:\\Users\\wsg\\.android\\build-cache\\2f155ce9c169d3a59f1e886bee174e7f662dae5b\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\anim\\push_top_out2.xml",
+        "source": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\src\\main\\res\\anim\\push_top_out2.xml"
     },
     {
         "merged": "G:\\git\\XSY-University-trade\\XSYTrade\\easeui\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",

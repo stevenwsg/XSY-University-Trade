@@ -33,6 +33,7 @@ public class NewBuyActivity extends BaseActivity {
     private String image;
     private String mtitle;
     private  String mcontent;
+    private String messageid;
 
 
     @BindView(R.id.newbuy_title)
@@ -54,6 +55,7 @@ public class NewBuyActivity extends BaseActivity {
         MyUser userInfo = BmobUser.getCurrentUser(MyUser.class);
         mname=userInfo.getUsername();
         image=userInfo.getImage();
+        messageid=userInfo.getObjectId();
         mtitle=newbuyTitle.getText().toString().trim();
         mcontent=newbuyContent.getText().toString().trim();
 
@@ -62,6 +64,7 @@ public class NewBuyActivity extends BaseActivity {
             buy.setName(mname);
             buy.setImage(image);
             buy.setTitle(mtitle);
+            buy.setMessageid(messageid);
             buy.setContent(mcontent);
             saveBuy();
         }
