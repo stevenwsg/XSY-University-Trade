@@ -16,16 +16,13 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-       multiDexEnabled true
-        resConfigs "zh"
+        multiDexEnabled true
     }
     buildTypes {
         release {
-            //Zipalign优化
-            zipAlignEnabled true
-            shrinkResources true
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            shrinkResources true
+//            minifyEnabled true
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
     productFlavors {
@@ -68,7 +65,9 @@ dependencies {
     }
     //图片选择器
     compile 'com.github.LuckSiege.PictureSelector:picture_library:v2.1.1'
-    compile 'com.android.support:multidex:'
+
+    compile 'com.android.support:multidex:1.0.1'
+
     compile files('libs/mta-sdk-1.6.2.jar')
     compile project(':easeui')
 }

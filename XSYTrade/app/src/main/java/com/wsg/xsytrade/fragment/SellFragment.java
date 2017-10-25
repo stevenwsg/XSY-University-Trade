@@ -141,7 +141,7 @@ public class SellFragment extends Fragment implements SellAdapter.Callback{
         //1、获取表中存放的数据
         BmobQuery<Sell> query = new BmobQuery<Sell>();
         //返回50条数据，如果不加上这条语句，默认返回10条数据
-        query.setLimit(20);
+        query.setLimit(50);
         //按照时间降序
         query.order("-createdAt");
         //执行查询，第一个参数为上下文，第二个参数为查找的回调

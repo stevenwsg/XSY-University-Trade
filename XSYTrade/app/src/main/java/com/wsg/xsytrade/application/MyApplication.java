@@ -1,5 +1,8 @@
 package com.wsg.xsytrade.application;
 
+import android.os.Build;
+import android.os.StrictMode;
+import android.support.annotation.RequiresApi;
 import android.support.multidex.MultiDexApplication;
 
 import com.baidu.mapapi.SDKInitializer;
@@ -21,6 +24,7 @@ import cn.bmob.v3.Bmob;
  */
 
 public class MyApplication extends MultiDexApplication {
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     @Override
     public void onCreate() {
         super.onCreate();
@@ -47,5 +51,11 @@ public class MyApplication extends MultiDexApplication {
 //        //在使用SDK各组件之前初始化context信息，传入ApplicationContext
 //        //注意该方法要再setContentView方法之前实现
         SDKInitializer.initialize(getApplicationContext());
+
+
+        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+        StrictMode.setVmPolicy(builder.build());
+        builder.detectFileUriExposure();
+
     }
 }

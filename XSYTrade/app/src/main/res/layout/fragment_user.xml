@@ -196,13 +196,7 @@
 
 
 
-        <TextView
-            android:id="@+id/tv_share"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:text="分享"
-            android:textSize="20dp"/>
+
 
         <View
             android:layout_width="match_parent"
