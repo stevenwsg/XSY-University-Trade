@@ -18,7 +18,7 @@ PictureSelector图片选择器
 当然最重要的是bmob,实现用户管理，论坛实现，文件上传与下载
 
 
-![Image text]()
+![Image text](https://github.com/stevenwsg/img-folder/blob/master/%E7%9F%B3%E5%A4%A7%E4%BA%A4%E6%98%93/1558E8D5D1B9F5D9F1D7E1D32B06F1D4.png)
 ![Image text]()
 ![Image text]()
 ![Image text]()
