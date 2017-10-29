@@ -76,7 +76,7 @@ public class LoginActivity extends BaseActivity {
     private IUiListener userInfoListener;
     private String scope;
     private UserInfo userInfo;
-    ImageView img_login_qq;
+    private ImageView img_login_qq;
     private String username;
     private String emal;
     private String nickName;
@@ -190,11 +190,11 @@ public class LoginActivity extends BaseActivity {
                 break;
             case R.id.btnLogi_qq:
 //                Toast.makeText(LoginActivity.this,"等待等待再等待",Toast.LENGTH_SHORT).show();
-
-                scope = "all";
-                initLoginListener();
-                initUserInfoListener();
-                qqLogin();
+//
+//                scope = "all";
+//                initLoginListener();
+//                initUserInfoListener();
+//                qqLogin();
                 break;
         }
     }
@@ -424,12 +424,6 @@ qq登录开始
 
                                     }
                                 }).start();
-
-
-
-
-
-
 
 
 

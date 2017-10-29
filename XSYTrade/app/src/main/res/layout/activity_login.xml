@@ -93,12 +93,16 @@
         android:orientation="horizontal">
 
         <TextView
+            android:visibility="gone"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/app_three_login"
             android:textSize="20sp"
             android:layout_weight="1"/>
         <ImageView
+
+            android:clickable="false"
+            android:visibility="gone"
             android:id="@+id/btnLogi_qq"
             android:layout_width="0dp"
             android:layout_height="30dp"
