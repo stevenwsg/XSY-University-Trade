@@ -30,7 +30,6 @@ public class NewBuyActivity extends BaseActivity {
 
     private Buy buy;
     private String mname;
-    private String image;
     private String mtitle;
     private  String mcontent;
     private String messageid;
@@ -54,7 +53,6 @@ public class NewBuyActivity extends BaseActivity {
     public void onViewClicked() {
         MyUser userInfo = BmobUser.getCurrentUser(MyUser.class);
         mname=userInfo.getUsername();
-        image=userInfo.getImage();
         messageid=userInfo.getObjectId();
         mtitle=newbuyTitle.getText().toString().trim();
         mcontent=newbuyContent.getText().toString().trim();
@@ -62,7 +60,6 @@ public class NewBuyActivity extends BaseActivity {
         if (!TextUtils.isEmpty(mname)&& !TextUtils.isEmpty(mtitle)&&!TextUtils.isEmpty(mcontent)){
             buy=new Buy();
             buy.setName(mname);
-            buy.setImage(image);
             buy.setTitle(mtitle);
             buy.setMessageid(messageid);
             buy.setContent(mcontent);

@@ -155,6 +155,7 @@ public class SellFragment extends Fragment implements SellAdapter.Callback{
                     mList.addAll(list);
                     adapter.notifyDataSetChanged();
                 } else {
+                    L.d(e.toString() + e.getErrorCode() + e.getMessage());
                     Toast.makeText(getActivity(), "数据获取失败，请检查网络，亲~~~", Toast.LENGTH_SHORT).show();
                 }
             }

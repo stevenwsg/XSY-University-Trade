@@ -54,7 +54,6 @@ public class NewSellActivity extends BaseActivity {
     LinearLayout newsellLl;
     private Sell sell;
     private String mname;
-    private String image;
     private String mtitle;
     private String mcontent;
     private String messageid;
@@ -109,7 +108,6 @@ public class NewSellActivity extends BaseActivity {
 
                 MyUser userInfo = BmobUser.getCurrentUser(MyUser.class);
                 mname = userInfo.getUsername();
-                image = userInfo.getImage();
                 messageid=userInfo.getObjectId();
                 mtitle = newsellTitle.getText().toString().trim();
                 mcontent = newsellContent.getText().toString().trim();
@@ -118,7 +116,6 @@ public class NewSellActivity extends BaseActivity {
                 if (!TextUtils.isEmpty(mname) && !TextUtils.isEmpty(mtitle) && !TextUtils.isEmpty(mcontent)) {
                     sell = new Sell();
                     sell.setName(mname);
-                    sell.setImage(image);
                     sell.setTitle(mtitle);
                     sell.setContent(mcontent);
                     sell.setMessageid(messageid);

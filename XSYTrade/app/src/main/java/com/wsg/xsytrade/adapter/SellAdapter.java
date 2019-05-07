@@ -119,9 +119,7 @@ public class SellAdapter extends BaseAdapter implements View.OnClickListener {
         viewHolder1.iv_message.setOnClickListener(this);
         viewHolder1.iv_message.setTag(i);
 
-        if (data.getImage()!=null){
-            UtilTools.getImage(mContext,viewHolder1.iv_logo,mList.get(i).getImage());
-        }
+
 
 
 

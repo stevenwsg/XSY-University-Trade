@@ -11,6 +11,7 @@ import com.wsg.xsytrade.adapter.MySellAdapter;
 import com.wsg.xsytrade.base.BaseActivity;
 import com.wsg.xsytrade.entity.MyUser;
 import com.wsg.xsytrade.entity.Sell;
+import com.wsg.xsytrade.util.L;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -84,10 +85,12 @@ public class MySellActivity extends BaseActivity implements MySellAdapter.Callba
             public void done(List<Sell> list, BmobException e) {
                 if (e == null) {
 
+
                     mList.clear();
                     mList.addAll(list);
-                    adapter.notifyDataSetChanged();
+                    adapter.notifyDataSetChanged();;
                 } else {
+                    L.d(e.toString() + e.getErrorCode() + e.getMessage());
                     Toast.makeText(MySellActivity.this, "数据获取失败，请检查网络，亲~~~", Toast.LENGTH_SHORT).show();
                 }
             }

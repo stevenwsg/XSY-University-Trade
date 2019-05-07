@@ -13,7 +13,7 @@ import android.util.Log;
 
 public class L {
     //开关
-    public static final  boolean DEBUG = false;
+    public static final  boolean DEBUG = true;
     //TAG
     public static final String TAG = "WSG";
 

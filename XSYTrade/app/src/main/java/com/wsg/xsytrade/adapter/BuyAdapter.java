@@ -102,11 +102,6 @@ public class BuyAdapter extends BaseAdapter implements View.OnClickListener {
         viewHolder1.tv_content.setText(data.getContent());
 
 
-        if(mList.get(i).getImage()!=null){
-            UtilTools.getImage(mContext,viewHolder1.iv_logo,mList.get(i).getImage());
-        }
-
-
         return view;
     }
 

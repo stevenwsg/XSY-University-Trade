@@ -146,12 +146,11 @@ public class BuyFragment extends Fragment implements BuyAdapter.Callback {
             @Override
             public void done(List<Buy> list, BmobException e) {
                 if (e == null) {
-
                     mList.clear();
                     mList.addAll(list);
                     adapter.notifyDataSetChanged();
-
                 } else {
+                    L.d(e.toString() + e.getErrorCode() + e.getMessage());
                     Toast.makeText(getActivity(), "数据获取失败，请检查网络，亲~~~", Toast.LENGTH_SHORT).show();
                 }
             }

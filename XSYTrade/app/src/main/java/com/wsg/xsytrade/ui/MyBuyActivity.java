@@ -11,6 +11,7 @@ import com.wsg.xsytrade.adapter.MyBuyAdapter;
 import com.wsg.xsytrade.base.BaseActivity;
 import com.wsg.xsytrade.entity.Buy;
 import com.wsg.xsytrade.entity.MyUser;
+import com.wsg.xsytrade.util.L;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -91,6 +92,7 @@ public class MyBuyActivity extends BaseActivity implements MyBuyAdapter.Callback
                     mList.addAll(list);
                     adapter.notifyDataSetChanged();
                 } else {
+                    L.d(e.toString() + e.getErrorCode() + e.getMessage());
                     Toast.makeText(MyBuyActivity.this, "数据获取失败，请检查网络，亲~~~", Toast.LENGTH_SHORT).show();
                 }
             }
